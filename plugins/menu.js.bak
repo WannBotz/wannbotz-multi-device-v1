@@ -1,0 +1,216 @@
+import { promises, readFileSync } from 'fs'
+import { join } from 'path'
+import { xpRange } from '../lib/levelling.js'
+import fetch from 'node-fetch'
+
+let tags = {
+  'main': ' 𝗠𝗔𝗜𝗡',
+'game': ' 𝗚𝗔𝗠𝗘',
+'rpg': ' 𝗥𝗣𝗚 𝗚𝗔𝗠𝗘𝗦',
+'xp': ' 𝗘𝗫𝗣 & 𝗟𝗜𝗠𝗜𝗧',
+'sticker': ' 𝗦𝗧𝗜𝗖𝗞𝗘𝗥',
+'kerang': ' 𝗞𝗘𝗥𝗔𝗡𝗚 𝗔𝗝𝗔𝗜𝗕',
+'quotes': ' 𝗤𝗨𝗢𝗧𝗘𝗦',
+'fun': ' 𝗙𝗨𝗡',
+'anime': ' 𝗔𝗡𝗜𝗠𝗘',
+'admin': ' 𝗔𝗗𝗠𝗜𝗡',
+'group': ' 𝗚𝗥𝗢𝗨𝗣',
+'menfess': ' 𝗠𝗘𝗡𝗙𝗘𝗦𝗦',
+'vote': ' 𝗩𝗢𝗧𝗜𝗡𝗚',
+'absen': ' 𝗔𝗕𝗦𝗘𝗡',
+'virus': '𝗩𝗜𝗥𝗨𝗦',
+'premium': ' 𝗣𝗥𝗘𝗠𝗜𝗨𝗠',
+'anonymous': ' 𝗔𝗡𝗢𝗡𝗬𝗠𝗢𝗨𝗦 𝗖𝗛𝗔𝗧',
+'internet': ' 𝗜𝗡𝗧𝗘𝗥𝗡𝗘𝗧',
+'downloader': ' 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥',
+'tools': ' 𝗧𝗢𝗢𝗟𝗦',
+'nulis': ' 𝗠𝗔𝗚𝗘𝗥 𝗡𝗨𝗟𝗜𝗦',
+'audio': ' 𝗔𝗨𝗗𝗜𝗢',
+'logomaker': ' 𝗟𝗢𝗚𝗢 𝗠𝗔𝗞𝗘𝗥',
+'berita': ' 𝗕𝗘𝗥𝗜𝗧𝗔',
+'database': ' 𝗗𝗔𝗧𝗔𝗕𝗔𝗦𝗘',
+'quran': ' 𝗔𝗟-𝗤𝗨𝗥\'𝗔𝗡',
+'owner': ' 𝗢𝗪𝗡𝗘𝗥',
+'info': ' 𝗜𝗡𝗙𝗢',
+'nocatagory': ' 𝗡𝗢 𝗖𝗔𝗧𝗔𝗚𝗢𝗥𝗬',
+}
+let emot = `${pickRandom(['⎔', '✦', '⭑', 'ᯬ', '⭔', '◉', '⬟', '▢', '᭻', '»', '〆', '々', '⛥', '✗', '⛊', '⚜', '⚝', '⚚', '♪'])}`
+let rus = JSON.parse(readFileSync('./json/emoji.json'))
+let emm = rus.emoji
+
+const defaultMenu = {
+  before: `${global.readMore}`.trimStart(),
+  header: `${htki} *%category* ${htka}`,
+  body: `│ ${emot}  %cmd %isPremium %islimit`,
+  footer: `⟣─═══┈┈┈═══─⟢\n\n`,
+  after: `${botdate}`,
+}
+let handler = async (m, { conn, command, groupMetadata, usedPrefix: _p, __dirname }) => {
+  try {
+    let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
+    let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
+    let { exp, limit, level, role, money, lastclaim, lastweekly, registered, regTime, age, banned, pasangan } = global.db.data.users[who]
+    let { min, xp, max } = xpRange(level, global.multiplier)
+    let name = await conn.getName(who)
+    let wan = 'https://telegra.ph/file/c080917609684bf229cd3.jpg'
+    let pp = await conn.profilePictureUrl(who).catch(_ => './src/avatar_contact.png')
+    if (typeof global.db.data.users[who] == "undefined") {
+      global.db.data.users[who] = {
+        exp: 0,
+        limit: 10,
+        lastclaim: 0,
+        registered: false,
+        name: conn.getName(m.sender),
+        age: -1,
+        regTime: -1,
+        afk: -1,
+        afkReason: '',
+        banned: false,
+        level: 0,
+        lastweekly: 0,
+        role: 'Warrior V',
+        autolevelup: false,
+        money: 0,
+        pasangan: "",
+      }
+     }
+     let math = max - xp
+     let res = JSON.parse(readFileSync('./json/emoji.json'))
+     let em = res.emoji
+    let totalfeatures = Object.values(global.plugins).filter(
+    (v) => v.help && v.tags
+  ).length;
+    let d = new Date(new Date + 3600000)
+    let locale = 'id'
+    // d.getTimeZoneOffset()
+    // Offset -420 is 18.00
+    // Offset    0 is  0.00
+    // Offset  420 is  7.00
+    let weton = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'][Math.floor(d / 84600000) % 5]
+    let week = d.toLocaleDateString(locale, { weekday: 'long' })
+    let date = d.toLocaleDateString(locale, {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric'
+    })
+    let dateIslamic = Intl.DateTimeFormat(locale + '-TN-u-ca-islamic', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric'
+    }).format(d)
+    let time = d.toLocaleTimeString(locale, {
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric'
+    })
+    let _uptime = process.uptime() * 1000
+    let _muptime
+    if (process.send) {
+      process.send('uptime')
+      _muptime = await new Promise(resolve => {
+        process.once('message', resolve)
+        setTimeout(resolve, 1000)
+      }) * 1000
+    }
+    let muptime = clockString(_muptime)
+    let uptime = clockString(_uptime)
+    let totalreg = Object.keys(global.db.data.users).length
+    let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
+    let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(plugin => {
+      return {
+        help: Array.isArray(plugin.tags) ? plugin.help : [plugin.help],
+        tags: Array.isArray(plugin.tags) ? plugin.tags : [plugin.tags],
+        prefix: 'customPrefix' in plugin,
+        limit: plugin.limit,
+        premium: plugin.premium,
+        enabled: !plugin.disabled,
+      }
+    })
+    for (let plugin of help)
+      if (plugin && 'tags' in plugin)
+        for (let tag of plugin.tags)
+          if (!(tag in tags) && tag) tags[tag] = tag
+    conn.menu = conn.menu ? conn.menu : {}
+    let before = conn.menu.before || defaultMenu.before
+    let header = conn.menu.header || defaultMenu.header
+    let body = conn.menu.body || defaultMenu.body
+    let footer = conn.menu.footer || defaultMenu.footer
+    let after = conn.menu.after || (conn.user.jid == global.conn.user.jid ? '' : `Powered by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + defaultMenu.after
+    let _text = [
+      before,
+      ...Object.keys(tags).map(tag => {
+        return header.replace(/%category/g, tags[tag]) + '\n' + [
+          ...help.filter(menu => menu.tags && menu.tags.includes(tag) && menu.help).map(menu => {
+            return menu.help.map(help => {
+              return body.replace(/%cmd/g, menu.prefix ? help : '%p' + help)
+                .replace(/%islimit/g, menu.limit ? '🅛' : '')
+                .replace(/%isPremium/g, menu.premium ? '🅟' : '')
+                .trim()
+            }).join('\n')
+          }),
+          footer
+        ].join('\n')
+      }),
+      after
+    ].join('\n')
+    let text = typeof conn.menu == 'string' ? conn.menu : typeof conn.menu == 'object' ? _text : ''
+    let replace = {
+      '%': '%',
+      p: _p, uptime, muptime,
+      me: conn.getName(conn.user.jid),
+      npmname: _package.name,
+      npmdesc: _package.description,
+      version: _package.version,
+      exp: exp - min,
+      maxexp: xp,
+      totalexp: exp,
+      xp4levelup: max - exp,
+      github: _package.homepage ? _package.homepage.url || _package.homepage : '[unknown github url]',
+      level, totalfeatures, limit, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role, ucapan,
+      readmore: readMore
+    }
+    text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
+  let capp = `${ucapan}
+
+❍⃕  「 ${name} 」
+
+❍⃕  *I N F O - B O T*\n\n${emot} Sistem otomatis (WhatsApp Bot) yang dapat membantu untuk melakukan sesuatu, mencari dan mendapatkan data/informasi hanya melalui WhatsApp.\n\n❍⃕   *N O T E* \n\n${emot} Gunakan bot di private message agar bot merespon dengan cepat, \n\n${emot} Beri jeda yah agar terhindar dari banned😇\n\n*📮 *Note:* _Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada Owner dengan cara ketik .report banh tik tok audio error_\n\n${botdate}`
+conn.reply(m.chat, `Sedang Memuat ${command}....`, fliveLoc)
+await conn.send3ButtonImg(m.chat, await (await fetch('https://telegra.ph/file/c080917609684bf229cd3.jpg')).buffer(), capp, text.trim(), 'OWNER', '.owner', 'SEWA BOT', '.sewa', 'S & K', '.rules',  m, {
+      quoted: fliveLoc,  
+      contextInfo: { //forwardingScore: 99999, isForwarded: true,  
+          externalAdReply: {  showAdAttribution: false,       mediaUrl: syt,
+              title: gcname,
+              body: bottime,
+              description: syt,
+              mediaType: 1,  
+            thumbnail: await (await fetch('https://telegra.ph/file/c080917609684bf229cd3.jpg')).buffer(),
+           sourceUrl: syt
+          }  
+       }  
+      })
+  } catch (e) {
+    conn.reply(m.chat, 'Maaf, menu sedang error', m)
+    throw e
+  }
+}
+
+handler.command = /^(allmenu|menu|help|\?)$/i
+
+handler.exp = 3
+
+export default handler
+
+const more = String.fromCharCode(8206)
+const readMore = more.repeat(4001)
+
+function clockString(ms) {
+  let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
+  let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
+  let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
+  return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
+}
+
+function pickRandom(list) {
+     return list[Math.floor(Math.random() * list.length)]
+  }

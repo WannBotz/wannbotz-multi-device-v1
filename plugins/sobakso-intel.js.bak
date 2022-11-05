@@ -1,0 +1,25 @@
+import fs from 'fs'
+import fetch from 'node-fetch'
+let handler = async(m, { conn, text, usedPrefix, command }) => {
+    let info = fs.readFileSync('./mp3/intel.opus')
+let pp = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+		pp = await this.profilePictureUrl(m.sender, 'image')
+
+
+let td = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+
+conn.reply(m.chat, info, fvn, { contextInfo: { externalAdReply: { showAdAttribution: false,
+    mediaUrl: sgc,
+    mediaType: 2, 
+    description: sgc,
+    title: gcname,
+    body: bottime,
+    thumbnail: await(await fetch(pp)).buffer(),
+    sourceUrl: sgc
+  }
+  } }) 
+          }
+handler.customPrefix = /^(bjorkowi|jokowi|owi|megawati|puan|banteng|bnteng|banteng merah|bnteng merah)$/i
+handler.command = new RegExp
+
+export default handler
