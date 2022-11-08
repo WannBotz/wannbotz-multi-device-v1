@@ -740,28 +740,8 @@ export async function participantsUpdate({ id, participants, action }) {
                                 membercount: groupMetadata.participants.length
                             })
                             
- /* conn.sendButtonDoc(id, wm, text, action == 'add' ? 'ᴡᴇʟᴄᴏᴍᴇ' : 'sᴀʏᴏɴᴀʀᴀᴀ', action === 'add' ? '.intro' : 'Aʟᴅɪ X Aɪsʏᴀʜ', fkontak, { contextInfo: { externalAdReply: { showAdAttribution: false,
-    mediaUrl: 'https://instagram/b4c00t4an_s3l3b',
-    mediaType: 2, 
-    description: sgc,
-    title: 'Hᴀʟᴏ Nɢᴀʙ',
-    body: wm,
-    thumbnail: await(await fetch(action === 'add' ? wel : lea)).buffer(),
-    sourceUrl: sgc
-     }}
-  })*/
-  let welcom = 'https://telegra.ph/file/95ba9831bf82cba71eba3.jpg'
-  let godbye = 'https://telegra.ph/file/55e23d88b560cb57871a2.jpg'
-  conn.sendButtonImg(id, await(await fetch(action === 'add' ? pp : pp)).buffer(), 'Group Messege', text, action == 'add' ? 'Selamat Datang 😇' : 'Sampai Jumpa 👋', action === 'add' ? 'intro' : 'hehe🗿', fvn, { contextInfo: { externalAdReply: { showAdAttribution: false,
-    mediaUrl: syt,
-    mediaType: 1, 
-    description: syt,
-    title: gcname,
-    body: bottime,
-    thumbnail: await(await fetch(action === 'add' ? welcom : godbye)).buffer(),
-    sourceUrl: syt
-     }}
-  })
+  conn.sendButtonImg(id, await(await fetch(action === 'add' ? pp : pp)).buffer(), 'Group Messege', text, action == 'add' ? 'Selamat Datang 😇' : 'Sampai Jumpa 👋', action === 'add' ? '.intro' : 'hehe🗿',
+     )
   
                     }
                 }
@@ -828,9 +808,7 @@ export async function deleteUpdate(message) {
         if (chat.delete)
             return
         await this.reply(msg.chat, `
-Terdeteksi @${participant.split`@`[0]} telah menghapus pesan
-Untuk mematikan fitur ini, ketik
-*.enable delete*
+Terdeteksi @${participant.split`@`[0]} Telah Menghapus Pesan:v
 `.trim(), msg, {
             mentions: [participant]
         })
@@ -849,102 +827,38 @@ const fliveLoc22 = {
        let tag = `@${m.sender.replace(/@.+/, '')}`
   let mentionedJid = [m.sender]
     let rown = {
-        rowner: '*ᴏɴʟʏ ᴅᴇᴠᴇʟᴏᴘᴇʀ* • ᴄᴏᴍᴍᴀɴᴅ ɪɴɪ ʜᴀɴʏᴀ ᴜɴᴛᴜᴋ ᴅᴇᴠᴇʟᴏᴘᴇʀ ʙᴏᴛ'}[type]
-  if (rown) return conn.sendButtonDocAccess(m.chat, `${ucapan()} ` + tag, rown + '\n\n\n\n', 'Owner', '.owner', fliveLoc22, { contextInfo: { externalAdReply: { showAdAttribution: false,
-    mediaUrl: syt,
-    mediaType: 2, 
-    description: syt,
-    title: gcname,
-    body: bottime,
-    thumbnail: fs.readFileSync('./thumbnail.jpg'),
-    sourceUrl: syt
-     }}
-  })
+        rowner: '*ᴏɴʟʏ ᴅᴇᴠᴇʟᴏᴘᴇʀ* • ᴄᴏᴍᴍᴀɴᴅ ɪɴɪ ʜᴀɴʏᴀ ᴜɴᴛᴜᴋ ᴅᴇᴠᴇʟᴏᴘᴇʀ ʙᴏᴛ\n'}[type]
+  if (rown) return conn.sendButtonImg(m.chat, thumb, `${global.danied}`, rown, 'OWNER', '.owner', ) 
 
         
 let own = {
-owner: '*ᴏɴʟʏ ᴏᴡɴᴇʀ* • ᴄᴏᴍᴍᴀɴᴅ ɪɴɪ ʜᴀɴʏᴀ ᴜɴᴛᴜᴋ ᴏᴡɴᴇʀ ʙᴏᴛ'}[type]
-  if (own) return conn.sendButtonDocAccess(m.chat, `${ucapan()} ` + tag, own + '\n\n\n\n', 'Owner', '.owner', fliveLoc22, { contextInfo: { externalAdReply: { showAdAttribution: false,
-    mediaUrl: syt,
-    mediaType: 2, 
-    description: syt,
-    title: gcname,
-    body: bottime,
-    thumbnail: fs.readFileSync('./thumbnail.jpg'),
-    sourceUrl: syt
-     }}
-  })
+owner: '*ᴏɴʟʏ ᴏᴡɴᴇʀ* • ᴄᴏᴍᴍᴀɴᴅ ɪɴɪ ʜᴀɴʏᴀ ᴜɴᴛᴜᴋ ᴏᴡɴᴇʀ ʙᴏᴛ\n'}[type]
+  if (own) return conn.sendButtonImg(m.chat, thumb, `${global.danied}`, own, 'OWNER', '.owner',) 
 
 let mod = {
-mods: '*ᴏɴʟʏ ᴍᴏᴅᴇʀᴀᴛᴏʀ* • ᴄᴏᴍᴍᴀɴᴅ ɪɴɪ ʜᴀɴʏᴀ ᴜɴᴛᴜᴋ ᴍᴏᴅᴇʀᴀᴛᴏʀ ʙᴏᴛ'}[type]
-  if (mod) return conn.sendButtonDocAccess(m.chat, `${ucapan()} ` + tag, mod + '\n\n\n\n', 'MENU', '.menu', fliveLoc22, { contextInfo: { externalAdReply: { showAdAttribution: false,
-    mediaUrl: syt,
-    mediaType: 2, 
-    description: syt,
-    title: gcname,
-    body: bottime,
-    thumbnail: fs.readFileSync('./thumbnail.jpg'),
-    sourceUrl: syt
-     }}
-  })
+mods: '*ᴏɴʟʏ ᴍᴏᴅᴇʀᴀᴛᴏʀ* • ᴄᴏᴍᴍᴀɴᴅ ɪɴɪ ʜᴀɴʏᴀ ᴜɴᴛᴜᴋ ᴍᴏᴅᴇʀᴀᴛᴏʀ ʙᴏᴛ\n'}[type]
+  if (mod) return conn.sendButtonImg(m.chat, thumb, `${global.danied}`, mod, 'MENU', '.menu',) 
 let prm = {
-        premium: '*ᴏɴʟʏ ᴘʀᴇᴍɪᴜᴍ* • ᴄᴏᴍᴍᴀɴᴅ ɪɴɪ ʜᴀɴʏᴀ ᴜɴᴛᴜᴋ ᴘʀᴇᴍɪᴜᴍ ᴜsᴇʀ'}[type]
-  if (prm) return conn.sendButtonDocAccess(m.chat, `${ucapan()} ` + tag, prm + '\n\n\n\n', 'Beli Prem', '.sewa', fliveLoc22, { contextInfo: { externalAdReply: { showAdAttribution: false,
-    mediaUrl: syt,
-    mediaType: 2, 
-    description: syt,
-    title: gcname,
-    body: bottime,
-    thumbnail: fs.readFileSync('./thumbnail.jpg'),
-    sourceUrl: syt
-     }}
-  })
+        premium: '*ᴏɴʟʏ ᴘʀᴇᴍɪᴜᴍ* • ᴄᴏᴍᴍᴀɴᴅ ɪɴɪ ʜᴀɴʏᴀ ᴜɴᴛᴜᴋ ᴘʀᴇᴍɪᴜᴍ ᴜsᴇʀ\n'}[type]
+  if (prm) return conn.sendButtonImg(m.chat, thumb, `${global.danied}`, prm, 'BUY PREMIUM', '.sewa',) 
 
 let gc = {
-        group: '*ɢʀᴏᴜᴘ ᴄʜᴀᴛ* • ᴄᴏᴍᴍᴀɴᴅ ɪɴɪ ʜᴀɴʏᴀ ʙɪsᴀ ᴅɪᴘᴀᴋᴀɪ ᴅɪᴅᴀʟᴀᴍ ɢʀᴏᴜᴘ'
+        group: '*ɢʀᴏᴜᴘ ᴄʜᴀᴛ* • ᴄᴏᴍᴍᴀɴᴅ ɪɴɪ ʜᴀɴʏᴀ ʙɪsᴀ ᴅɪᴘᴀᴋᴀɪ ᴅɪᴅᴀʟᴀᴍ ɢʀᴏᴜᴘ\n'
         }[type]
-  if (gc) return conn.sendButtonDocAccess(m.chat, `${ucapan()} ` + tag, gc + '\n\n\n\n', 'MENU', '.menu', fliveLoc22, { contextInfo: { externalAdReply: { showAdAttribution: false,
-    mediaUrl: syt,
-    mediaType: 2, 
-    description: syt,
-    title: gcname,
-    body: bottime,
-    thumbnail: fs.readFileSync('./thumbnail.jpg'),
-    sourceUrl: syt
-     }}
-  })
+  if (gc) return conn.sendButtonImg(m.chat, thumb, `${global.danied}`, gc, 'MENU', '.menu',) 
 
 let msg = {
-        private: '*ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ* • ᴄᴏᴍᴍᴀɴᴅ ɪɴɪ ʜᴀɴʏᴀ ʙɪsᴀ ᴅɪᴘᴀᴋᴀɪ ᴅɪᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ',
-        admin: '*ᴏɴʟʏ ᴀᴅᴍɪɴ* • ᴄᴏᴍᴍᴀɴᴅ ɪɴɪ ʜᴀɴʏᴀ ᴜɴᴛᴜᴋ ᴀᴅᴍɪɴ ɢʀᴏᴜᴘ',
-        botAdmin: '*ᴏɴʟʏ ʙᴏᴛ ᴀᴅᴍɪɴ* • ᴄᴏᴍᴍᴀɴᴅ ɪɴɪ ʜᴀɴʏᴀ ʙɪsᴀ ᴅɪɢᴜɴᴀᴋᴀɴ ᴋᴇᴛɪᴋᴀ ʙᴏᴛ ᴍᴇɴᴊᴀᴅɪ ᴀᴅᴍɪɴ',
-        restrict: '*ʀᴇsᴛʀɪᴄᴛ* • ʀᴇsᴛʀɪᴄᴛ ʙᴇʟᴜᴍ ᴅɪɴʏᴀʟᴀᴋᴀɴ ᴅɪᴄʜᴀᴛ ɪɴɪ'}[type]
-  /*  if (msg) return conn.sendButtonDoc(m.chat, msg, wm, 'Menu', '.menu', fgclink)*/
-  if (msg) return conn.sendButtonDocAccess(m.chat, `${ucapan()} ` + tag, msg + '\n\n\n\n', 'MENU', '.menu', fliveLoc22, { contextInfo: { externalAdReply: { showAdAttribution: false,
-    mediaUrl: syt,
-    mediaType: 2, 
-    description: syt,
-    title: gcname,
-    body: bottime,
-    thumbnail: fs.readFileSync('./thumbnail.jpg'),
-    sourceUrl: syt
-     }}
-  })
+        private: '*ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ* • ᴄᴏᴍᴍᴀɴᴅ ɪɴɪ ʜᴀɴʏᴀ ʙɪsᴀ ᴅɪᴘᴀᴋᴀɪ ᴅɪᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ\n',
+        admin: '*ᴏɴʟʏ ᴀᴅᴍɪɴ* • ᴄᴏᴍᴍᴀɴᴅ ɪɴɪ ʜᴀɴʏᴀ ᴜɴᴛᴜᴋ ᴀᴅᴍɪɴ ɢʀᴏᴜᴘ\n',
+        botAdmin: '*ᴏɴʟʏ ʙᴏᴛ ᴀᴅᴍɪɴ* • ᴄᴏᴍᴍᴀɴᴅ ɪɴɪ ʜᴀɴʏᴀ ʙɪsᴀ ᴅɪɢᴜɴᴀᴋᴀɴ ᴋᴇᴛɪᴋᴀ ʙᴏᴛ ᴍᴇɴᴊᴀᴅɪ ᴀᴅᴍɪɴ\n',
+        restrict: '*ʀᴇsᴛʀɪᴄᴛ* • ʀᴇsᴛʀɪᴄᴛ ʙᴇʟᴜᴍ ᴅɪɴʏᴀʟᴀᴋᴀɴ ᴅɪᴄʜᴀᴛ ɪɴɪ\n'}[type]
+  if (msg) return conn.sendButtonImg(m.chat, thumb, `${global.danied}`, msg, 'MENU', '.menu',) 
   
   
     let msgg = {
-    	unreg: 'ʜᴀʟʟᴏ ᴋᴀᴋ 👋\nᴀɴᴅᴀ ʜᴀʀᴜs ᴍᴇɴᴅᴀғᴛᴀʀ ᴋᴇ ᴅᴀᴛᴀʙᴀsᴇ ʙᴏᴛ ᴅᴜʟᴜ sᴇʙᴇʟᴜᴍ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ ғɪᴛᴜʀ ɪɴɪ\n\n➞ ᴋʟɪᴄᴋ ᴛᴏᴍʙᴏʟ ᴅɪʙᴀᴡᴀʜ ᴜɴᴛᴜᴋ ᴍᴇɴᴅᴀғᴛᴀʀ ᴋᴇ ᴅᴀᴛᴀʙᴀsᴇ ʙᴏᴛ'
+    	unreg: `ᴀɴᴅᴀ ʜᴀʀᴜs ᴛᴇʀᴅᴀғᴛᴀʀ ᴅᴀʟᴀᴍ ᴅᴀᴛᴀʙᴀsᴇ ʙᴏᴛ ᴛᴇʀʟᴇʙɪʜ ᴅᴀʜᴜʟᴜ, sᴇʙᴇʟᴜᴍ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ ғɪᴛᴜʀ ᴛᴇʀsᴇʙᴜᴛ\n\nᴋʟɪᴋ ᴛᴏᴍʙᴏʟ ᴅɪʙᴀᴡᴀʜ,ᴜɴᴛᴜᴋ ᴍᴇɴᴅᴀғᴛᴀʀ ᴋᴇ ᴅᴀʟᴀᴍ ᴅᴀᴛᴀʙᴀsᴇ ʙᴏᴛ!!\n`
 }[type]
-if (msgg) return conn.sendButtonDocAccess(m.chat, `${ucapan()} ` + tag, msgg + '\n\n\n\n', '❮ ᴠᴇʀɪғʏ ❯', '.verify', fliveLoc22, { contextInfo: { externalAdReply: { showAdAttribution: false,
-    mediaUrl: syt,
-    mediaType: 2, 
-    description: syt,
-    title: gcname,
-    body: bottime,
-    thumbnail: fs.readFileSync('./thumbnail.jpg'),
-    sourceUrl: syt
-     }}
-  })
+if (msgg) return conn.sendButtonImg(m.chat, thumb, `${global.danied}`, msgg, 'DAFTAR', '.reg',) 
 }
 function ucapan() {
   const time = moment.tz('Asia/Jakarta').format('HH')

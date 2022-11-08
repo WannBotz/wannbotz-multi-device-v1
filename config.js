@@ -59,9 +59,10 @@ global.gcname = '𝐖𝐚𝐧𝐧𝐁𝐨𝐭𝐳-𝐌𝐃 𝐎𝐟𝐟𝐢𝐜�
 global.author = '「 𝐖𝐚𝐧𝐧𝐳𝐱-𝐌𝐝 」'
 global.namebot = '​ 「 𝐖𝐚𝐧𝐧𝐁𝐨𝐭𝐳-𝐌𝐃 」'
 global.wm = '© 𝘾𝙧𝙚𝙖𝙩𝙚𝙙 𝘽𝙮 𝐖𝐚𝐧𝐧𝐳𝐱-𝐌𝐝'
-global.media = 'https://telegra.ph/file/0d2efbe03c88316379ce6.jpg'
+global.media = 'https://telegra.ph/file/c080917609684bf229cd3.jpg'
 global.watermark = wm
 global.status = 'public'
+global.danied = '          ⚠️ 𝐀𝐜𝐜𝐞𝐬 𝐃𝐚𝐧𝐢𝐞𝐝 ⚠️  '
 global.wame = 'https://wa.me/message/6TYVKZNILFJYL1'
 global.alllink = `${pickRandom([`https://wa.me/message/6TYVKZNILFJYL1`, `https://www.instagram.com/wannzx_133`, `https://youtube.com/channel/UC_kZ0QiOmykIPGMbfTcErJw`])}`
 global.wm2 = '「 𝐖𝐚𝐧𝐧𝐁𝐨𝐭𝐳-𝐌𝐃 」 '
@@ -215,7 +216,7 @@ global.rpg = {
 
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ WEBSITE APIKEY ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
 global.zenzkey = 'b8040941f7'
-global.lolkey = '357d3c85079c4e0818731e6b' // PUNYA WAHID 357d3c85079c4e0818731e6b
+global.lolkey = '8e66d0934cf741bfd2182c16' // PUNYA WAHID 357d3c85079c4e0818731e6b
 global.APIs = { // API Prefix
   // name: 'https://website'
   nrtm: 'https://nurutomo.herokuapp.com',
@@ -268,10 +269,10 @@ global.drtf = 'text/rtf'
 //OPTIONS
 global.optsnsfw = true // Untuk mematikan Dan Menyalakan Nsfw
 global.premnsfw = true // Nsfw Mode Premium?
-global.thumb = 'https://telegra.ph/file/0d2efbe03c88316379ce6.jpg' //Main Thumbnail
-global.imagebot = 'https://telegra.ph/file/0d2efbe03c88316379ce6.jpg'
+global.thumb = 'https://telegra.ph/file/c080917609684bf229cd3.jpg' //Main Thumbnail
+global.imagebot = 'https://telegra.ph/file/c080917609684bf229cd3.jpg'
 global.giflogo = 'https://telegra.ph/file/4d4f611baff7d92ec5e81.mp4'
-global.thumbs = ['https://telegra.ph/file/0d2efbe03c88316379ce6.jpg']
+global.thumbs = ['https://telegra.ph/file/c080917609684bf229cd3.jpg']
 global.thumbnailUrl = [
   'https://telegra.ph/file/81260a8b9e8cff26d2b48.jpg', 'https://telegra.ph/file/ac4928f0824a2a0492737.jpg',
   'https://telegra.ph/file/6359b013bc7e52c3b346f.jpg', 'https://telegra.ph/file/d43c89a5d2da72875ec05.jpg',
@@ -279,8 +280,8 @@ global.thumbnailUrl = [
   'https://telegra.ph/file/55e5af5f33fbd57104187.jpg', 'https://telegra.ph/file/af236598456b95884bd15.jpg',
   'https://telegra.ph/file/de92ed4a729887ffc974c.jpg', 'https://telegra.ph/file/00ce42a193b1dbbf907d4.jpg'
 ]
-global.fotonya1 = 'https://telegra.ph/file/0d2efbe03c88316379ce6.jpg' //ganti jadi foto bot mu
-global.fotonya2 = 'https://telegra.ph/file/0d2efbe03c88316379ce6.jpg' //ini juga ganti 
+global.fotonya1 = 'https://telegra.ph/file/c080917609684bf229cd3.jpg' //ganti jadi foto bot mu
+global.fotonya2 = 'https://telegra.ph/file/c080917609684bf229cd3.jpg' //ini juga ganti 
 global.flaaa2 = [
  "https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=water-logo&script=water-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextColor=%23000&shadowGlowColor=%23000&backgroundColor=%23000&text=",
  "https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=crafts-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&text=",
@@ -352,7 +353,7 @@ function ucapan() {
 
 global.fsizedoc = '99999999999999'
 global.fpagedoc = '999'
-global.thumbdoc = 'https://telegra.ph/file/0d2efbe03c88316379ce6.jpg'
+global.thumbdoc = 'https://telegra.ph/file/c080917609684bf229cd3.jpg'
 
 let file = fileURLToPath(import.meta.url)
 watchFile(file, () => {
