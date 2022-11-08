@@ -8,11 +8,16 @@ let handler = m => m
 handler.all = async function (m) {
     let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let name = conn.getName(who)
-	let pp = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+let pp = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 	try {
 		pp = await this.profilePictureUrl(m.sender, 'image')
 	} catch (e) {
 	} finally {
+/*global.pp = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+	try {
+		pp = await this.profilePictureUrl(m.sender, 'image')
+	} catch (e) {
+	} finally {*/
 		
         //global.bg = await (await fetch(img)).buffer()
 		global.doc = pickRandom(["application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/msword", "application/pdf"])
@@ -43,8 +48,8 @@ let name = conn.getName(who)
 				externalAdReply: { // Bagian ini sesuka kalian berkreasi :'v
                     showAdAttribution: false,
 					title: global.ucapan,
-					body: "Hallo " + name,
-					mediaUrl: sgc,
+					body: `${name}`,
+					mediaUrl: syt,
 					description: 'simple bot esm',
 					previewType: "PHOTO",
 					thumbnail: await (await fetch(pp)).buffer(),
@@ -124,7 +129,7 @@ let name = conn.getName(who)
                                "mimetype": "image/jpeg",
                                "jpegThumbnail": fs.readFileSync('./thumbnail.jpg') //Gambarnye
                            },
-                           "title": wm, //Kasih namalu 
+                           "title": gcname, //Kasih namalu 
                            "description": "Simple Bot Esm", 
                            "currencyCode": "USD",
                            "priceAmount1000": "20000000",
@@ -158,8 +163,8 @@ let name = conn.getName(who)
                "groupInviteMessage": {
                    "groupJid": "6282127487538-1625305606@g.us",
                    "inviteCode": "null",
-                   "groupName": gcname, 
-                   "caption": gcname, 
+                   "groupName": ' ',
+                   "caption": ' ',
                    'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')
                }
            }
@@ -215,7 +220,6 @@ let name = conn.getName(who)
 			}
 	}
 }
-
 export default handler 
 
 function ucapan() {

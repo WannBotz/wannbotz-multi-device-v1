@@ -44,7 +44,7 @@ _Cara penggunaan WannBotz-MD Agar terhindar dari Suspand_
 4. WannBotz-MD akan memberlakukan hukuman: block atau ban terhadap users yang melanggar peraturan.
 5. WannBotz-MD bertanggung jawab atas kesalahan fatal dalam programing maupun owner.
 `
-  conn.send2ButtonImg(m.chat, pepe, `  ${htki} *RULES* ${htka}`, anu, 'Menu', '.menu', 'Owner', '.owner', m)
+  conn.send2ButtonImg(m.chat, pepe, `  ${htki} *RULES* ${htka}`, anu, 'Menu', '.menu', 'Owner', '.owner',)
 }
 handler.help = ['rules']
 handler.tags = ['info']

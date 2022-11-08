@@ -6,11 +6,7 @@ export async function before(m, { conn, isAdmin, isBotAdmin }) {
         return !0
     if (!m.isGroup) return !1
     let chat = global.db.data.chats[m.chat]
-    let fliveLoc22 = {
-            key: {
-            participant : '0@s.whatsapp.net'},
-            message: { "liveLocationMessage": { "title": gcname,"h": bottime, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')}}
-           }
+   
     let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let name = conn.getName(who)
     let bot = global.db.data.settings[this.user.jid] || {}
@@ -59,7 +55,7 @@ let name = conn.getName(who)
             includeStarred: false
         }).catch(console.log)
     }
-        await conn.sendButton(m.chat, `Terdeteksi *${name}* Telah Mengirim Font Aneh! (Virus Text)\n\nPesan Anda Akan Dihapus!${isBotAdmin ? '' : '\n\n_Bot bukan admin_'}`, author, ['Owner', '/owner'], fliveLoc22)
+        await conn.sendButton(m.chat, `Terdeteksi *${name}* Telah Mengirim Font Aneh! (Virus Text)\n\nPesan Anda Akan Dihapus!${isBotAdmin ? '' : '\n\n_Bot bukan admin_'}`, author, ['Owner', '/owner'],)
         if (isBotAdmin && bot.restrict) {
        return conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
         await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')

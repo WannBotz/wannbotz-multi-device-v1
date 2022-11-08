@@ -76,7 +76,7 @@ let fliveLoc = {
             message: { "liveLocationMessage": { "caption": wm,"h": `${bottime}`, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')}}
            }
                
-let info = fs.readFileSync('./mp3/Bot.opus')
+let info = fs.readFileSync('./mp3/desah.opus')
 let fliveLoc22 = {
             key: {
             participant : '0@s.whatsapp.net'},
@@ -85,7 +85,7 @@ let fliveLoc22 = {
 /*let litch = fs.readFileSync('./mp3/Bot.opus')
 let imgloc = 'https://telegra.ph/file/4d4f611baff7d92ec5e81.mp4'*/
 conn.reply(m.chat, `Sedang Memuat....`, m)
-await conn.send2ButtonDoc(m.chat, cap, botdate, 'ALL MENU', '.? all', 'LIST MENU', '.listmenu', fliveLoc22, {
+await conn.send2ButtonDoc(m.chat, cap, botdate, 'ALL MENU', '.? all', 'LIST MENU', '.listmenu', ftoko, {
 			contextInfo: {
 				forwardingScore: fsizedoc,
 				externalAdReply: {
@@ -106,13 +106,13 @@ await conn.send2ButtonDoc(m.chat, cap, botdate, 'ALL MENU', '.? all', 'LIST MENU
 			}
 })
 await conn.reply(m.chat, info, fvn, { contextInfo: { externalAdReply: { showAdAttribution: false,
-    mediaUrl: sgc,
-    mediaType: 2, 
-    description: sgc,
-    title: gcname,
-    body: bottime,
+    mediaUrl: syt,
+    mediaType: 1, 
+    description: syt,
+    title: `Jangan Diplay ${name}!!!`,
+    body: `⚠️ 𝐃𝐀𝐍𝐆𝐄𝐑 ⚠️`,
     thumbnail: await(await fetch("https://telegra.ph/file/c080917609684bf229cd3.jpg")).buffer(),
-    sourceUrl: sgc
+    sourceUrl: syt
   }
   } }) 
           }

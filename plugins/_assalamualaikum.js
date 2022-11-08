@@ -4,7 +4,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 let info = `*Wa'alaikumsalam*`
 let td = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
 
-conn.reply(m.chat, info, m, { contextInfo: { externalAdReply: {title: gcname, body: bottime, sourceUrl: syt, thumbnail: fs.readFileSync('./thumbnail.jpg')  }}})
+conn.reply(m.chat, info, m)
 }
 handler.customPrefix = /^(Assalamualaikum|asalamualaikum|assalamualaikum|salam)$/i
 handler.command = new RegExp

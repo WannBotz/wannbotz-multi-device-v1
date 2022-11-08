@@ -16,7 +16,7 @@ conn.reply(m.chat, info, fvn, { contextInfo: { externalAdReply: { showAdAttribut
   }
   } }) 
           }
-handler.customPrefix = /^(yntkts|siapa|siaoa|nanya|nanyee|yah gak tau|gak tau|tau)$/i
+handler.customPrefix = /^(yntkts|siapa|kenapa?|knpa?|knp?|kenapa|knpa|knp|siaoa|nanya|nanyee|yah gak tau|gak tau|tau)$/i
 handler.command = new RegExp
 
 export default handler

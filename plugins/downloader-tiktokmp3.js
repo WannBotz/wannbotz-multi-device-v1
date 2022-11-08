@@ -1,25 +1,16 @@
-    import axios from 'axios'
+import axios from 'axios'
 import fetch from 'node-fetch'
 let handler = async (m, { conn, args, usedPrefix, command }) => {
     if (!args[0]) throw `contoh:\n ${usedPrefix}${command} https://www.tiktok.com/@omagadsus/video/7025456384175017243`
-    let res = (await axios.get(API('males', '/tiktok2', { url: args[0] } ))).data;
+    let cop = 'Jika tiktokmp3nya Berbentuk Video Ubah Aja Ke mp3,Dengan Cara Replay tiktokmp3 Yang Berbentuk Video,Kemudin Ketik .tomp3'
+    let res = (await axios.get(API('males', '/tiktok', { url: args[0] } ))).data;
     if (res.status != 200) throw res.message;
     if (!res) throw res.message;
-    
-conn.sendFile(m.chat, res.audio, 'error.mp3', null, m, true, {
-type: 'audioMessage', 
-ptt: false, seconds: 0,contextInfo: {
-         externalAdReply: { showAdAttribution: false,
- mediaUrl: wame,
-    mediaType: 1, 
-    description: syt,
-    title: "Nihh cuy🗿",
-    body: bottime,
-    thumbnail: await (await fetch('https://telegra.ph/file/c080917609684bf229cd3.jpg')).buffer(),
-    sourceUrl: syt}}})
+ conn.reply(m.chat, `${wait}`, m)   
+await conn.sendFile(m.chat, res.videoWM, 'tiktok.mp3', cop, m, { mentions: [m.sender], mimetype: 'audio/mp3', asDocument: db.data.chats[m.chat].useDocument })
 }
-handler.help = ['tiktok'].map(v => v + ' <url>')
+handler.help = ['tiktokmp3'].map(v => v + ' <url>')
 handler.tags = ['downloader']
-handler.command = /^(tiktokmp3|ttdlmp3|ttmp3|tiktokdlmp3|gettt)$/i
+handler.command = /^(tiktokmp3|ttdlmp3|ttmp3|tiktokdlmp3|tiktokaudio|tta)$/i
 
 export default handler

@@ -11,7 +11,7 @@ export async function all(m) {
                 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let name = conn.getName(who)
     let caption = `Jangan Spam ya👍`
-    this.reply(m.chat, caption, m, { mentions: this.parseMention(caption) })
+    this.reply(m.chat, caption, { mentions: this.parseMention(caption) })
             }
             this.spam[m.sender].count = 0
             this.spam[m.sender].lastspam = m.messageTimestamp.toNumber()

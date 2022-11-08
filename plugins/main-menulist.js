@@ -25,8 +25,7 @@ let tags
 let rndom = `${pickRandom(['defaultMenu', 'defmenu1'])}`
 let teks = `${args[0]}`.toLowerCase()
 conn.reply(m.chat, `Sedang Memuat...`, m)
-let arrayMenu = ['all', 'anime', 'update', 'logomaker', 'berita', 'edukasi', 'news', 'random', 'game', 'xp', 'menfess',
-'menbalas', 'islamic', 'stiker', 'rpg', 'kerangajaib', 'quotes', 'admin', 'group', 'virus', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database","quran', 'vote', 'nsfw', 'audio', 'jadibot', 'info', 'owner', 'nocategory']
+let arrayMenu = ['all', 'anime', 'update', 'logomaker', 'berita', 'edukasi', 'news', 'random', 'game', 'xp', 'menfess', 'islami', 'menbalas', 'islamic', 'stiker', 'rpg', 'kerangajaib', 'quotes', 'admin', 'group', 'virus', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database","quran', 'vote', 'nsfw', 'audio', 'jadibot', 'info', 'owner', 'nocategory']
 if (!arrayMenu.includes(teks)) teks = '404'
 if (teks == 'all') tags = {
 'main': ' 𝗠𝗔𝗜𝗡',
@@ -37,6 +36,7 @@ if (teks == 'all') tags = {
 'kerang': ' 𝗞𝗘𝗥𝗔𝗡𝗚 𝗔𝗝𝗔𝗜𝗕',
 'quotes': ' 𝗤𝗨𝗢𝗧𝗘𝗦',
 'fun': ' 𝗙𝗨𝗡',
+'islami': ' 𝗠𝗨𝗦𝗟𝗜𝗠',
 'anime': ' 𝗔𝗡𝗜𝗠𝗘',
 'admin': ' 𝗔𝗗𝗠𝗜𝗡',
 'group': ' 𝗚𝗥𝗢𝗨𝗣',
@@ -97,6 +97,9 @@ if (teks == 'kerangajaib') tags = {
   }
 if (teks == 'menfess') tags = {
     'menfess': 'Menfess'
+}
+if (teks == 'islami') tags = {
+'islami': 'Islami'
 }
 if (teks == 'quotes') tags = {
 'quotes': 'Quotes'
@@ -197,44 +200,45 @@ let mpt = clockString(_mpt)
 const sections = [{
 title: `${htki} 𝐌𝐄𝐍𝐔 ${htka}`,
 rows: [
-{title: `${emot} Menfess`, rowId: ".? Menfess", description: " "},
-{title: `${emot} Virus`, rowId: ".? virus", description: " "},
-{title: `${emot} Logo Maker`, rowId: ".? logomaker", description: " "},
-{title: `${emot} Rpg`, rowId: ".? rpg", description: " "},
-{title: `${emot} Exp`, rowId: ".? xp", description: " "},
-{title: `${emot} Game`, rowId: ".? game", description: " "},
-{title: `${emot} Fun`, rowId: ".? fun", description: " "},
-{title: `${emot} Kerang`, rowId: ".? kerangajaib", description: " "},
-{title: `${emot} Quotes`, rowId: ".? quotes", description: " "},
-{title: `${emot} Anime`, rowId: ".? anime", description: " "},
-{title: `${emot} Nsfw`, rowId: ".? nsfw", description: " "},
-{title: `${emot} Premium`, rowId: ".? premium", description: " "},
-{title: `${emot} Anonymous Chats`, rowId: ".? anonymous", description: " "},
-{title: `${emot} Al-Quran`, rowId: ".? quran", description: " "},
-{title: `${emot} Internet`, rowId: ".? internet", description: " "},
-{title: `${emot} Berita`, rowId: ".? berita", description: " "},
-{title: `${emot} Downloaders`, rowId: ".? downloader", description: " "},
-{title: `${emot} Stikers`, rowId: ".? stiker", description: " "},
-{title: `${emot} Nulis`, rowId: ".? nulis", description: " "},
-{title: `${emot} Audio`, rowId: ".? audio", description: " "},
-{title: `${emot} Sound Menu`, rowId: ".soundmenu", description: " "},
-{title: `${emot} Group`, rowId: ".? group", description: " "},
-{title: `${emot} Admin`, rowId: ".? admin", description: " "},
-{title: `${emot} Database`, rowId: ".? database", description: " "},
-{title: `${emot} Tools`, rowId: ".? tools", description: " "},
-{title: `${emot} Info`, rowId: ".? info", description: " "},
-{title: `${emot} Owner`, rowId: ".? owner", description: " "},
-{title: `\n${emot} No Category`, rowId: ".? nocategory", description: " "},
+{title: `${emot} Menfess`, rowId: ".? Menfess", },
+{title: `${emot} Virus`, rowId: ".? virus", },
+{title: `${emot} Logo Maker`, rowId: ".? logomaker", },
+{title: `${emot} Rpg`, rowId: ".? rpg", },
+{title: `${emot} Muslim`, rowId: ".? islami", },
+{title: `${emot} Exp`, rowId: ".? xp", },
+{title: `${emot} Game`, rowId: ".? game", },
+{title: `${emot} Fun`, rowId: ".? fun", },
+{title: `${emot} Kerang`, rowId: ".? kerangajaib", },
+{title: `${emot} Quotes`, rowId: ".? quotes", },
+{title: `${emot} Anime`, rowId: ".? anime", },
+{title: `${emot} Nsfw`, rowId: ".? nsfw", },
+{title: `${emot} Premium`, rowId: ".? premium", },
+{title: `${emot} Anonymous Chats`, rowId: ".? anonymous", },
+{title: `${emot} Al-Quran`, rowId: ".? quran", },
+{title: `${emot} Internet`, rowId: ".? internet", },
+{title: `${emot} Berita`, rowId: ".? berita", },
+{title: `${emot} Downloaders`, rowId: ".? downloader", },
+{title: `${emot} Stikers`, rowId: ".? stiker", },
+{title: `${emot} Nulis`, rowId: ".? nulis", },
+{title: `${emot} Audio`, rowId: ".? audio", },
+{title: `${emot} Sound Menu`, rowId: ".soundmenu", },
+{title: `${emot} Group`, rowId: ".? group", },
+{title: `${emot} Admin`, rowId: ".? admin", },
+{title: `${emot} Database`, rowId: ".? database", },
+{title: `${emot} Tools`, rowId: ".? tools", },
+{title: `${emot} Info`, rowId: ".? info", },
+{title: `${emot} Owner`, rowId: ".? owner", },
+{title: `\n${emot} No Category`, rowId: ".? nocategory", },
 ]
 },{
 title: `${htki} 𝐈𝐍𝐅𝐎 ${htka}`,
 rows: [
-{title: `${emot} OWNER BOT`, rowId: ".owner", description: "Menampilkan Kontak Owner WannBotz-MD"},
-{title: `${emot} SCRIPT`, rowId: ".sc", description: `Source Code WannBotz-MD`},
-{title: `${emot} SEWA WannBotz-MD`, rowId: ".sewa", description: "Menampilkan list harga sewa WannBotz-MD"},
-{title: `${emot} BUY PREMIUM`, rowId: ".premium", description: "Menampilkan list harga premium"},
-{title: `${emot} DONASI`, rowId: ".donasi", description: 'Support WannBotz-MD agar lebih fast respon'},
-{title: `${emot} S & K`, rowId: ".rules", description: 'Syarat dan ketentuan WannBotz-MD'},
+{title: `${emot} OWNER BOT`, rowId: ".owner", },
+{title: `${emot} SCRIPT`, rowId: ".sc", },
+{title: `${emot} SEWA WannBotz-MD`, rowId: ".sewa", },
+{title: `${emot} BUY PREMIUM`, rowId: ".premium", },
+{title: `${emot} DONASI`, rowId: ".donasi", },
+{title: `${emot} S & K`, rowId: ".rules", },
 ] },
 ]
 let psan = 'bagaimana kabarmu?'
@@ -293,7 +297,7 @@ buttonText: `Click Here!`,
 sections
 }
 if (teks == '404') { 
-return await conn.sendMessage(m.chat, listMessage, { quoted: fvn, mentions: await conn.parseMention(capp), contextInfo:{ forwardingScore: 99999, isForwarded: true }})
+return await conn.sendMessage(m.chat, listMessage, { quoted: ftoko, mentions: await conn.parseMention(capp), contextInfo:{ forwardingScore: 99999, isForwarded: true }})
 }
 
  /**************************** TIME *********************/
@@ -479,7 +483,7 @@ const ftrol = {
     surface : 1,
 
     message: `Hai Kak ${name}!`, 
-
+    
     orderTitle: `▮Menu ▸`,
 
     thumbnail: await (await fetch(fla + 'Menu')).buffer(), //Gambarnye

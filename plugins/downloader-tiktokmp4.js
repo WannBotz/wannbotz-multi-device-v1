@@ -7,10 +7,10 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     
     let result = `
 ${res.title}\n\n${res.author}\n\nCara simpan digalery:\n1. Download dulu videonya\n2. Buka terus klik titik 3 pojok kanan atas\n3. lalu klik simpan!`
-    conn.send2ButtonVid(m.chat, res.video, result, `${botdate}`, `Audio`, `.ttmp3 ${args[0]}`, `Audio Alternative`, `.gettt ${args[0]}`, m)
+    conn.sendButtonVid(m.chat, res.video, result, `${botdate}`, `Thanks Cuy🗿`, `.thanks`, m)
 }
-handler.help = ['tiktok'].map(v => v + ' <url>')
+handler.help = ['tiktoknowm'].map(v => v + ' <url>')
 handler.tags = ['downloader']
-handler.command = /^(tiktok|ttdl|tt|tiktokdl)$/i
+handler.command = /^(tiktoknowm)$/i
 
 export default handler

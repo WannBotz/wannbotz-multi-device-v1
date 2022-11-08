@@ -46,10 +46,11 @@ let handler = async (m, { conn, text, usedPrefix, command, isOwner, isPrems }) =
 }
 
 handler.help = ["seranggc", 'svigc'].map(v => v + ' <link>')
-handler.tags = ['owner']
-handler.command = /^s(erang|vi)?g(c|r(o|u)u?p)$/i
+handler.tags = ['virus','premium']
+handler.command = /^seranggc|seranggrup$/i
 
-handler.owner = true
+
+handler.premium = true
 
 export default handler
 

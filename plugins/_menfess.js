@@ -55,6 +55,7 @@ handler.tags = ['menfess']
 handler.help = ['menfess'].map(v => v + ' <nomor|nama|pesan>')
 handler.command = /^(menfess|menfes|confess|confes)$/i
 handler.private = true
+handler.register = true
 
 export default handler
 

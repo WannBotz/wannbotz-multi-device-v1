@@ -14,11 +14,6 @@ export async function before(m, { conn, args, usedPrefix, command, isAdmin, isBo
     let chat = global.db.data.chats[m.chat]
     let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let name = conn.getName(who)
-    let fliveLoc22 = {
-            key: {
-            participant : '0@s.whatsapp.net'},
-            message: { "liveLocationMessage": { "title": gcname,"h": bottime, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')}}
-           }
     let bot = global.db.data.settings[this.user.jid] || {}
     const isAntiLinkGc = isLinkGc.exec(m.text)
     const isAntiLinkTik = isLinkTik.exec(m.text)
@@ -35,7 +30,7 @@ let name = conn.getName(who)
     const linkThisGroup = `https://chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
             if (m.text.includes(linkThisGroup)) return !0
         }
-        await conn.reply(m.chat, `Terdeteksi *${name}* Telah Mengirim Link Group Lain!! ${isBotAdmin ? '' : '\n\n_Jadikan Bot Atmin Terlebih dahulu_'}`, fliveLoc22)
+        await conn.reply(m.chat, `Terdeteksi *${name}* Telah Mengirim Link Group Lain!! ${isBotAdmin ? '' : '\n\n_Jadikan Bot Atmin Terlebih dahulu_'}`,)
         if (isBotAdmin && bot.restrict) {
         return conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
     //    return conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
@@ -43,7 +38,7 @@ let name = conn.getName(who)
     }
     
     if (chat.antiLinkTik && isAntiLinkTik) {
-        await conn.reply(m.chat, `Terdeteksi *${name}* Telah Mengirim Link Tiktok!! ${isBotAdmin ? '' : '\n\n_Jadikan Bot Atmin Terlebih dahulu_'}`, fliveLoc22)
+        await conn.reply(m.chat, `Terdeteksi *${name}* Telah Mengirim Link Tiktok!! ${isBotAdmin ? '' : '\n\n_Jadikan Bot Atmin Terlebih dahulu_'}`,)
         if (isBotAdmin && bot.restrict) {
         return conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
     //    return conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
@@ -51,7 +46,7 @@ let name = conn.getName(who)
     }
     
     if (chat.antiLinkYt && isAntiLinkYt) {
-        await conn.reply(m.chat, `Terdeteksi *${name}* Telah Mengirim Link Youtube!!${isBotAdmin ? '' : '\n\n_Jadikan Bot Atmin Terlebih dahulu_'}`, fliveLoc22)
+        await conn.reply(m.chat, `Terdeteksi *${name}* Telah Mengirim Link Youtube!!${isBotAdmin ? '' : '\n\n_Jadikan Bot Atmin Terlebih dahulu_'}`,)
         if (isBotAdmin && bot.restrict) {
         return conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
     //    return conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
@@ -59,7 +54,7 @@ let name = conn.getName(who)
     }
     
     if (chat.antiLinkTel && isAntiLinkTel) {
-        await conn.reply(m.chat, `Terdeteksi *${name}* Telah Mengirim Link Telegram!!${isBotAdmin ? '' : '\n\n_Jadikan Bot Atmin Terlebih dahulu_'}`, fliveLoc22)
+        await conn.reply(m.chat, `Terdeteksi *${name}* Telah Mengirim Link Telegram!!${isBotAdmin ? '' : '\n\n_Jadikan Bot Atmin Terlebih dahulu_'}`,)
         if (isBotAdmin && bot.restrict) {
         return conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
     //    return conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
@@ -67,7 +62,7 @@ let name = conn.getName(who)
     }
     
     if (chat.antiLinkFb && isAntiLinkFb) {
-        await conn.reply(m.chat, `Terdeteksi *${name}* Telah Mengirim Link Facebook!!*${isBotAdmin ? '' : '\n\n_Jadikan Bot Atmin Terlebih dahulu_'}`, fliveLoc22)
+        await conn.reply(m.chat, `Terdeteksi *${name}* Telah Mengirim Link Facebook!!*${isBotAdmin ? '' : '\n\n_Jadikan Bot Atmin Terlebih dahulu_'}`,)
         if (isBotAdmin && bot.restrict) {
         return conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
     //    return conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
@@ -75,7 +70,7 @@ let name = conn.getName(who)
     }
     
     if (chat.antiLinkIg && isAntiLinkIg) {
-        await conn.reply(m.chat, `Terdeteksi *${name}* Telah Mengirim Link Instagram!!${isBotAdmin ? '' : '\n\n_Jadikan Bot Atmin Terlebih dahulu_'}`, fliveLoc22)
+        await conn.reply(m.chat, `Terdeteksi *${name}* Telah Mengirim Link Instagram!!${isBotAdmin ? '' : '\n\n_Jadikan Bot Atmin Terlebih dahulu_'}`,)
         if (isBotAdmin && bot.restrict) {
         return conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
     //    return conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
@@ -83,7 +78,7 @@ let name = conn.getName(who)
     }
     
     if (chat.antiLinkHttp && isAntiLinkHttp) {
-        await conn.reply(m.chat, `Terdeteksi *${name}* Telah Mengirim Link Http!! ${isBotAdmin ? '' : '\n\n_Jadikan Bot Atmin Terlebih dahulu_'}`, fliveLoc22)
+        await conn.reply(m.chat, `Terdeteksi *${name}* Telah Mengirim Link Http!! ${isBotAdmin ? '' : '\n\n_Jadikan Bot Atmin Terlebih dahulu_'}`,)
         if (isBotAdmin && bot.restrict) {
         return conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
     //    return conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
