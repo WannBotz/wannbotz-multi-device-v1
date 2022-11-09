@@ -44,6 +44,7 @@ if (teks == 'all') tags = {
 'vote': ' 𝗩𝗢𝗧𝗜𝗡𝗚',
 'absen': ' 𝗔𝗕𝗦𝗘𝗡',
 'virus': '𝗩𝗜𝗥𝗨𝗦',
+'islami': '𝗜𝗦𝗟𝗔𝗠𝗜',
 'premium': ' 𝗣𝗥𝗘𝗠𝗜𝗨𝗠',
 'anonymous': ' 𝗔𝗡𝗢𝗡𝗬𝗠𝗢𝗨𝗦 𝗖𝗛𝗔𝗧',
 'internet': ' 𝗜𝗡𝗧𝗘𝗥𝗡𝗘𝗧',
@@ -587,14 +588,14 @@ await conn.send3ButtonImg(m.chat, await (await fetch('https://telegra.ph/file/
 
     
 //-------DOC TEMPLATE
-   /* const message = {
+    /*const message = {
             document: { url: thumbdoc },
             jpegThumbnail: await (await fetch(thumbdoc)).buffer(),
             fileName: '𝗧 𝗜 𝗠 𝗘 : ' + wktuwib,
             mimetype: td,
             fileLength: fsizedoc,
             pageCount: fpagedoc,
-            caption: text,
+            caption: tess,
             footer: titlebot + '\n⚡ Supported By Fangz TEAM',
             templateButtons: [
                 {
@@ -629,17 +630,17 @@ await conn.send3ButtonImg(m.chat, await (await fetch('https://telegra.ph/file/
                 },
             ]
         }
-        await conn.sendMessage(m.chat, message, m, { mentionedJid: [m.sender] })*/
+        await conn.sendMessage(m.chat, message,)
 //------------------- BUTTON VID
 /*conn.sendButton(m.chat, text, wm, 'https://youtu.be/3ONnszQtwz0', [['Ping', '.speed'],['Owner', '.owner'],['Donasi', '.donasi']],ftoko, { gifPlayback: true, contextInfo: { externalAdReply: {title: namebot, body: bottime, sourceUrl: sig, thumbnail: fs.readFileSync('./thumbnail.jpg') }}})*/
 
-handler.help = ['listmenu', '?']
+handler.help = ['listmenu', '?'] 
 handler.tags = ['main']
-handler.command = /^(listmenu|\?)$/i
+handler.command = /^(tesm|listmenu|\?)$/i
 
 handler.register = false
 handler.exp = 3
-
+ 
 export default handler
 
 //----------- FUNCTION -------

@@ -5,6 +5,8 @@ import fs from 'fs'
 import { sticker } from '../lib/sticker.js'
 let handler  = async (m, { conn, args, text, command, usedPrefix, participants }) => {
 let wanz = 'https://telegra.ph/file/c080917609684bf229cd3.jpg'
+let data = (await conn.onWhatsApp(text))[0] || {}
+    if (!data.exists) throw `Nomor Tersebut ~${text}~ Tidak Terdaftar Di WhatsApp!`;
 if (!text)return conn.send2ButtonImg(m.chat, `https://telegra.ph/file/c080917609684bf229cd3.jpg`, `${gcname}`,`*Nomor Yang Mau DiKirim ${command} Mana Cuy?*\n\n*NOTE*:Virus Ini Aktif Ketika Korban Mau Balas Audio,Maka Wangsafnya Akan Crash.\nhehe🗿\n\n${botdate}`,
      'Owner','.owner',
        'Donasi','.donasi'
@@ -19,7 +21,7 @@ await conn.send2ButtonImg(m.chat, wanz, gcname, `*Sukses Mengirim ${command} Ke 
      'Owner','.owner'
        )
           }
-handler.help = ['virusaudio-v2 <number>']
+handler.help = ['virusaudio-v2 <628XXXXXX>']
 handler.tags = ['virus']
 handler.command = /^(virusaudio-v2)$/i
 handler.premium = false
