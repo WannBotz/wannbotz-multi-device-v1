@@ -125,7 +125,7 @@ async function connectionUpdate(update) {
     global.timestamp.connect = new Date
   }
   if (global.db.data == null) loadDatabase()
-   if (update.receivedPendingNotifications) return this.sendButton(nomorown + '@s.whatsapp.net', 'Bot Successfully Connected', author, null, [['MENU', '/menu']], null)
+   if (update.receivedPendingNotifications) return conn.reply(nomorown + '@s.whatsapp.net', 'Bot Successfully Connected',)
 }
 
 process.on('uncaughtException', console.error)
