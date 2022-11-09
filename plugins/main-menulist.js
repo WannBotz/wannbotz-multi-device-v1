@@ -297,7 +297,7 @@ buttonText: `Click Here!`,
 sections
 }
 if (teks == '404') { 
-return await conn.sendMessage(m.chat, listMessage, { quoted: ftoko, mentions: await conn.parseMention(capp), contextInfo:{ forwardingScore: 99999, isForwarded: true }})
+return await conn.sendMessage(m.chat, listMessage, { quoted: fkontak, mentions: await conn.parseMention(capp), contextInfo:{ forwardingScore: 99999, isForwarded: true }})
 }
 
  /**************************** TIME *********************/

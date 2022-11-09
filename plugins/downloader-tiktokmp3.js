@@ -9,8 +9,6 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
  conn.reply(m.chat, `${wait}`, m)   
 await conn.sendFile(m.chat, res.videoWM, 'tiktok.mp3', cop, m, { mentions: [m.sender], mimetype: 'audio/mp3', asDocument: db.data.chats[m.chat].useDocument })
 }
-handler.help = ['tiktokmp3'].map(v => v + ' <url>')
-handler.tags = ['downloader']
 handler.command = /^(tiktokmp3|ttdlmp3|ttmp3|tiktokdlmp3|tiktokaudio|tta)$/i
 
 export default handler
