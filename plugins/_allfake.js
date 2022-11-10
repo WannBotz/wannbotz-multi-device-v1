@@ -8,7 +8,7 @@ let handler = m => m
 handler.all = async function (m) {
     let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let name = conn.getName(who)
-let pp = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+let pp = 'https://telegra.ph/file/c9f09c6512b2f9cd6c977.jpg'
 	try {
 		pp = await this.profilePictureUrl(m.sender, 'image')
 	} catch (e) {
@@ -49,23 +49,23 @@ let pp = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gam
                     showAdAttribution: false,
 					title: global.ucapan,
 					body: `${name}`,
-					mediaUrl: syt,
-					description: 'simple bot esm',
+					mediaUrl: sytv,
+					description: sytv,
 					previewType: "PHOTO",
 					thumbnail: await (await fetch(pp)).buffer(),
-					sourceUrl: syt,					
+					sourceUrl: sytv,					
 				}
 			}
 		}
 		global.fakeig = {
          contextInfo: { externalAdReply: { showAdAttribution: false,
-            mediaUrl: "https://Instagram.com/wannzx_133",
+            mediaUrl: sytv,
             mediaType: "VIDEO",
-            description: "https://Instagram.com/wannzx_133", 
-            title: 'Simple Bot Esm',
-            body: wm,
+            description: sytv, 
+            title: gcname,
+            body: bottime,
             thumbnailUrl: pp,
-            sourceUrl: sgc
+            sourceUrl: sytv
     }
     } }
 		// Fake 🤥

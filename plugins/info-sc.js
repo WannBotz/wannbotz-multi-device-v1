@@ -4,8 +4,8 @@ let handler  = async (m, { conn, participants, usedPrefix: _p }) => {
 let name = conn.getName(who)
 	
                     let wan = 'https://telegra.ph/file/c080917609684bf229cd3.jpg'
-let anu2 =`Klik Tombol Dibawah,Jika Ingin Sc Bot Ini Hehe🗿`
-  conn.sendButtonImg(m.chat, await(await fetch(wan)).buffer(), anu2, botdate, 'Owner', 'owner',)
+let anu2 =`Esceh?\nNih:https://youtu.be/lN-0jnuK2Ko`
+  conn.sendButtonImg(m.chat, await(await fetch(wan)).buffer(), anu2, botdate, 'Thanks', '.thanks',)
 }
 handler.help = ['sc']
 handler.tags = ['info']
