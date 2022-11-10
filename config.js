@@ -64,7 +64,7 @@ global.watermark = wm
 global.status = 'public'
 global.danied = '          ⚠️ 𝐀𝐜𝐜𝐞𝐬 𝐃𝐚𝐧𝐢𝐞𝐝 ⚠️  '
 global.wame = 'https://wa.me/message/6TYVKZNILFJYL1'
-global.alllink = `${pickRandom([`https://wa.me/message/6TYVKZNILFJYL1`, `https://www.instagram.com/wannzx_133`, `https://youtube.com/channel/UC_kZ0QiOmykIPGMbfTcErJw`])}`
+global.alllink = `https://youtu.be/lN-0jnuK2Ko`
 global.wm2 = '「 𝐖𝐚𝐧𝐧𝐁𝐨𝐭𝐳-𝐌𝐃 」 '
 global.botdate = `⫹⫺ DATE: ${week} ${date}\n⫹⫺ TIME: ${wktuwib}`
 global.bottime = `T I M E : ${wktuwib}`
@@ -87,6 +87,7 @@ global.sgh = 'https://github.com/WannBotz' //github
 global.tautanwa = 'https://wa.me/message/6TYVKZNILFJYL1'
 global.sgc = 'https://chat.whatsapp.com/Bbh5bDDQsWQBxQTaY5tHBJ' //group whatsapp
 global.syt = 'https://youtube.com/channel/UC_kZ0QiOmykIPGMbfTcErJw' //youtube
+global.sytv = 'https://youtu.be/lN-0jnuK2Ko'//link video yt
 
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ DONASI ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
 global.pdana = '0812 65970249'

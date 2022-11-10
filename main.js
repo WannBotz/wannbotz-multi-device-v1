@@ -157,7 +157,7 @@ global.reloadHandler = async function (restatConn) {
   }
   
 let welc = `
-👋 Hallo @user\n\n                *W E L C O M E*\n\n@subject\n\n*DESCRIPTION*\n@desc\n\n\n${botdate}`
+👋 Hallo @user\n\n                *W E L C O M E*\n\n*GROUP NAME\n@subject\n\n*DESCRIPTION*\n@desc\n\nLink Script:https://youtu.be/lN-0jnuK2Ko\n\n${botdate}`
 let lef = 
 `👋 Byee ~@user~\n\n                *G O O D B Y E*\n\n\n${botdate}`
 
