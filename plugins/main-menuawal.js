@@ -38,7 +38,7 @@ let time = moment.tz('Asia/Jakarta').format('HH:mm:ss')
         pasangan: "",
       }
      }
-  let wann = "https://telegra.ph/file/c080917609684bf229cd3.jpg"
+  
   let cap = `
 ❍⃕  「 ${name} 」
 
@@ -85,7 +85,7 @@ let fliveLoc22 = {
 /*let litch = fs.readFileSync('./mp3/Bot.opus')
 let imgloc = 'https://telegra.ph/file/4d4f611baff7d92ec5e81.mp4'*/
 conn.reply(m.chat, `Sedang Memuat....`, m)
-await conn.send2ButtonDoc(m.chat, cap, botdate, 'ALL MENU', '.? all', 'LIST MENU', '.listmenu', ftoko, {
+conn.send2ButtonDoc(m.chat, cap, botdate, 'ALL MENU', '.? all', 'LIST MENU', '.listmenu', ftoko, {
 			contextInfo: {
 				forwardingScore: fsizedoc,
 				externalAdReply: {
@@ -95,13 +95,13 @@ await conn.send2ButtonDoc(m.chat, cap, botdate, 'ALL MENU', '.? all', 'LIST MENU
     mediaUrl: hwaifu.getRandom(), 
     renderLargerThumbnail: true,
     showAdAttribution: false,
-    sourceId: '© 𝐖𝐚𝐧𝐧𝐳𝐱-𝐌𝐝 ',
+    sourceId: wm,
     sourceType: 'PDF',
     previewType: 'PDF',
     sourceUrl: sgc,
-    thumbnail: await(await fetch(wann)).buffer(),
+    thumbnail: await (await fetch(thumb)).buffer(),
     thumbnailUrl: sgc,
-    title: '𝐖𝐚𝐧𝐧𝐁𝐨𝐭𝐳-𝐌𝐃 𝐎𝐟𝐟𝐢𝐜𝐢𝐚𝐥',
+    title: gcname,
 				}
 			}
 })
@@ -111,7 +111,7 @@ await conn.reply(m.chat, info, fvn, { contextInfo: { externalAdReply: { showAdAt
     description: syt,
     title: `Jangan Diplay ${name}!!!`,
     body: `⚠️ 𝐃𝐀𝐍𝐆𝐄𝐑 ⚠️`,
-    thumbnail: await(await fetch("https://telegra.ph/file/c080917609684bf229cd3.jpg")).buffer(),
+    thumbnail: await (await fetch(thumb)).buffer(),
     sourceUrl: syt
   }
   } }) 

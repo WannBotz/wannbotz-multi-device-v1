@@ -1,7 +1,7 @@
 import fetch from 'node-fetch'
 import fs from 'fs'
 let handler = async (m, { conn, generateWAMessageFromContent, }) => {
-    let { anon, anticall, antispam, antitroli, backup, jadibot, groupOnly, nsfw, statusupdate, autogetmsg, antivirus, publicjoin } = global.db.data.settings[conn.user.jid]
+    let { isBanned, welcome, detect, sWelcome, sBye, anticall, nsfw, premnsfw, autoresponder, viewonce, autoread, restrict, useDocument, stiker, autolevelup, whitelistmycontacts, self, premnsfwchat, document, autosticker, getmsg, nyimak, swonly, pconly, gconly, sPromote, sDemote, antiLinkTik, antiLinkTel, antiLinkIg, antiLinkHttp, antiLinkYt, antiLinkFb, antiVirtex, antiToxic, antiLinkGc, antiStiker, antiSpam, del } = global.db.data.settings[conn.user.jid]
     const chats = Object.keys(await conn.chats)
     const groups = Object.keys(await conn.groupFetchAllParticipating())
     const block = await conn.fetchBlocklist()
@@ -17,7 +17,7 @@ let handler = async (m, { conn, generateWAMessageFromContent, }) => {
                    "inviteCode": "null",
                    "groupName": "Halo", 
                    "caption": wm, 
-                   'jpegThumbnail': fs.readFileSync('./media/ok.jpg')
+                   'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')
                }
            }
        }
@@ -36,24 +36,47 @@ let handler = async (m, { conn, generateWAMessageFromContent, }) => {
 ╰────────────⬣
 
 ┌───〔 Pengaturan 〕───⬣
-│✧  ${anon ? '✅' : '❌'} *Anon Chat*
-│✧  ${anticall ? '✅' : '❌'} *Anti Call*
-│✧  ${antispam ? '✅' : '❌'} *Anti Spam*
-│✧  ${antitroli ? '✅' : '❌'} *Anti Troli*
-│✧  ${backup ? '✅' : '❌'} *Auto Backup DB*
-│✧  ${groupOnly ? '✅' : '❌'} *Mode Grup*
-│✧  ${jadibot ? '✅' : '❌'} *Jadi Bot*
-│✧  ${nsfw ? '✅' : '❌'} *Mode Nsfw*
+│✧  banned ${isBanned ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'} 
+│✧  welcome ${welcome ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'} 
+│✧  detect ${detect ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'} 
+│✧  antidelete ${del ? '❪𝗢𝗙𝗙❫' : '❪𝗢𝗡❫'} 
+│✧  antivirtex ${antiVirtex ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'} 
+│✧  antistiker ${antiStiker ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'} 
+│✧  antispam ${antiSpam ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'} 
+│✧  antitoxic ${antiToxic ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'} 
+│✧  antilinkgc ${antiLinkGc ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'} 
+│✧  antilinktik ${antiLinkTik ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'} 
+│✧  antilinktel ${antiLinkTel ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'} 
+│✧  antilinkyt ${antiLinkYt ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'} 
+│✧  antilinkhttp ${antiLinkHttp ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'} 
+│✧  antilinkig ${antiLinkIg ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'} 
+│✧  antilinkfb ${antiLinkFb ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'} 
+│✧  anticall ${anticall ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'} 
+│✧  autosticker ${stiker ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'}  
+│✧  autolevelup ${autolevelup ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'} ⮕  
+│✧  autoread ${autoread ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'}  
+│✧  document ${useDocument ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'}  
+│✧  detect ${detect ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'} 
+│✧  autoresponder ${autoresponder ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'} 
+│✧  nsfw ${nsfw ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'} 
+│✧  getmsg ${getmsg ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'}  
+│✧  premnsfw ${premnsfw ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'} 
+│✧  gconly ${gconly ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'}⮕ 
+│✧  nyimak ${nyimak ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'} ⮕ 
+│✧  pconly ${pconly ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'}⮕ 
+│✧  ${status} ${self ? '❪𝗢𝗙𝗙❫' : '❪𝗢𝗡❫'}⮕ 
+│✧  restrict ${restrict ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'}⮕  
+│✧  swonly ${swonly ? '❪𝗢𝗡❫' : '❪𝗢𝗙𝗙❫'}⮕  
 ╰────────────⬣`
 
-conn.sendButtonDoc(m.chat, '▷ʙᴏᴛ sᴛᴀᴛᴜs◁', sts, 'Owner', '.owner', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
-    mediaUrl: 'https//wa.me/6281361281833?text=Hᴀʟᴏ+ɢᴀɴᴛᴇɴɢᴋᴜ',
+conn.sendButtonDoc(m.chat, '*BOT STATUS*', sts, 'Owner', '.owner', m, { contextInfo: { externalAdReply: { showAdAttribution: false,
+    mediaUrl: syt,
     mediaType: 2, 
-    description: 'wa.me/6281361281833?text=Hᴀʟᴏ+ɢᴀɴᴛᴇɴɢᴋᴜ',
-    title: "Iɴɪ Fᴀᴄᴇʙᴏᴏᴋ Gᴡ!",
-    body: wm,
+    description: syt,
+    title: gcname,
+    body: bottime,
     thumbnail: fs.readFileSync('./thumbnail.jpg'),
-    sourceUrl: 'https://facebook.com/sadtime098'
+    sourceUrl: syt
      }}
   })
 

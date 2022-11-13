@@ -567,7 +567,7 @@ thumbnail: await(await fetch(thumb2)).buffer(),
            }
     
 //------------------ DOCUMENT
-await conn.send3ButtonImg(m.chat, await (await fetch('https://telegra.ph/file/c080917609684bf229cd3.jpg')).buffer(), cap1, text.trim(), 'OWNER', '.owner', 'SEWA BOT', '.sewa', 'S & K', '.rules',  m, {
+await conn.send3ButtonImg(m.chat, await (await fetch(thumb)).buffer(), cap1, text.trim(), 'OWNER', '.owner', 'SEWA BOT', '.sewa', 'S & K', '.rules',  m, {
       quoted: fliveLoc,  
       contextInfo: { //forwardingScore: 99999, isForwarded: true,  
           externalAdReply: {  showAdAttribution: false,       mediaUrl: syt,
@@ -575,7 +575,7 @@ await conn.send3ButtonImg(m.chat, await (await fetch('https://telegra.ph/file/
               body: bottime,
               description: syt,
               mediaType: 1,  
-            thumbnail: await (await fetch('https://telegra.ph/file/c080917609684bf229cd3.jpg')).buffer(),
+            thumbnail:  await (await fetch(thumb)).buffer(),
            sourceUrl: syt
           }  
        }  

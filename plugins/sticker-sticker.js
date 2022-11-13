@@ -4,7 +4,7 @@ import uploadImage from '../lib/uploadImage.js'
 import { webp2png } from '../lib/webp2mp4.js'
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-
+conn.reply(m.chat, `${wait}`, m)
   let stiker = false
   try {
     let q = m.quoted ? m.quoted : m
@@ -33,7 +33,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     console.error(e)
     if (!stiker) stiker = e
   } finally {
-    if (stiker) conn.sendFile(m.chat, stiker, 'sticker.webp', '', m)
+    if (stiker) await conn.sendFile(m.chat, stiker, 'sticker.webp', '', m)
     else throw 'Conversion failed'
   }
 }

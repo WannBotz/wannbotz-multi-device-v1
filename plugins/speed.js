@@ -91,26 +91,7 @@ let fliveLoc22 = {
             participant : '0@s.whatsapp.net'},
             message: { "liveLocationMessage": { "title": gcname,"h": bottime, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')}}
            }
-await conn.send2ButtonDoc(m.chat, runtt, botdate, 'Owner', '.owner', 'Menu', '.Menu', fliveLoc22, {
-			contextInfo: {
-				forwardingScore: fsizedoc,
-				externalAdReply: {
-                    body: bottime,
-    containsAutoReply: true,
-    mediaType: 1,
-    mediaUrl: syt,
-    renderLargerThumbnail: true,
-    showAdAttribution: false,
-    sourceId: '© 𝐖𝐚𝐧𝐧𝐳𝐱-𝐌𝐝 ',
-    sourceType: 'PDF',
-    previewType: 'PDF',
-    sourceUrl: wame,
-    thumbnail: await(await fetch(wan)).buffer(),
-    thumbnailUrl: syt,
-    title: '𝐖𝐚𝐧𝐧𝐁𝐨𝐭𝐳-𝐌𝐃 𝐎𝐟𝐟𝐢𝐜𝐢𝐚𝐥',
-				}
-			}
-})
+await conn.send2ButtonImg(m.chat, await (await fetch(thumb)).buffer(), runtt, botdate, 'Owner', '.owner', 'Menu', '.Menu', fliveLoc22)
 /*await conn.send2ButtonVid(m.chat, pp, cap, botdate, '𝐋𝐢𝐬𝐭𝐌𝐞𝐧𝐮', '.listmenu', '𝐃𝐚𝐬𝐛𝗼𝐚𝐫𝐝', '.db', m, adReply)*/
 }
 

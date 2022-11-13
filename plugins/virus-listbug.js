@@ -245,9 +245,9 @@ let wanz = 'https://telegra.ph/file/c080917609684bf229cd3.jpg'
 			throw false
 	}
 	conn.reply(m.chat, 'Sedang Mengirim...', m)
-	let bcbg = `https://telegra.ph/file/c080917609684bf229cd3.jpg`
+	
 
-      await conn.send3ButtonImg(m.chat, bcbg, gcname, `*Sukses Mengirim ${text}@s.whatsapp.net\n\n${botdate}`,
+      await conn.send3ButtonImg(m.chat, await (await fetch(thumb)).buffer(), gcname, `*Sukses Mengirim ${text}@s.whatsapp.net\n\n${botdate}`,
    'Menu','.menu',
      'Owner','.owner',
        'Donasi','.donasi'

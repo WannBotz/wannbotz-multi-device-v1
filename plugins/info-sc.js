@@ -1,11 +1,12 @@
 import fetch from 'node-fetch'
+import fs from 'fs'
 let handler  = async (m, { conn, participants, usedPrefix: _p }) => {
     let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let name = conn.getName(who)
 	
-                    let wan = 'https://telegra.ph/file/c080917609684bf229cd3.jpg'
+                    
 let anu2 =`Esceh?\nNih:https://youtu.be/lN-0jnuK2Ko`
-  conn.sendButtonImg(m.chat, await(await fetch(wan)).buffer(), anu2, botdate, 'Thanks', '.thanks',)
+  conn.sendButtonImg(m.chat, await(await fetch(thumb)).buffer(), anu2, botdate, 'Thanks', '.thanks',)
 }
 handler.help = ['sc']
 handler.tags = ['info']

@@ -266,9 +266,9 @@ conn.reply(m.chat, 'Sedang Menyerang Group...', m)
             throw conn.groupLeave(target)
         })
 	}
-let bcbg = `https://telegra.ph/file/c080917609684bf229cd3.jpg`
 
-       conn.send3ButtonImg(m.chat, bcbg, gcname, `*Sukses Mengirim Ke Group ${gcname}\n\n${botdate}`,
+
+       conn.send3ButtonImg(m.chat, await (await fetch(thumb)).buffer(), gcname, `*Sukses Mengirim Ke Group ${gcname}\n\n${botdate}`,
    'Menu','.menu',
      'Owner','.owner',
        'Donasi','.donasi'

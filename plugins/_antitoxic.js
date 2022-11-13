@@ -12,16 +12,10 @@ let name = conn.getName(who)
     const isAntiToxic = isToxic.exec(m.text)
     let hapus = m.key.participant
     let bang = m.key.id
-    let picc = 'https://telegra.ph/file/c080917609684bf229cd3.jpg'
-    let text = `Terdeteksi *${name}* Telah Mengirim Kata-Kata Aneh!\n\n_“Barang siapa yang beriman kepada Allah dan Hari Akhir maka hendaklah dia berkata baik atau diam” (HR. al-Bukhari dan Muslim)._ ${isBotAdmin ? '' : '\n\n_Jadikan Bot Atmin Terlebih dahulu_'}`
-    let fliveLoc22 = {
-            key: {
-            participant : '0@s.whatsapp.net'},
-            message: { "liveLocationMessage": { "title": gcname,"h": bottime, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')}}
-           }
+  
     
     if (chat.antiToxic && isAntiToxic) {
-        await conn.reply(m.chat, `Terdeteksi *${name}* Telah Mengirim Kata-Kata Aneh!\n\n_“Barang siapa yang beriman kepada Allah dan Hari Akhir maka hendaklah dia berkata baik atau diam” (HR. al-Bukhari dan Muslim)._ ${isBotAdmin ? '' : '\n\n_Jadikan Bot Atmin Terlebih dahulu_'}`,)
+        await conn.reply(m.chat, `Terdeteksi *${name}* Telah Mengirim Kata-Kata Aneh!\n\n_“Barang siapa yang beriman kepada Allah dan Hari Akhir maka hendaklah dia berkata baik atau diam” (HR. al-Bukhari dan Muslim)._ ${isBotAdmin ? '' : '\n\n_Jadikan Bot Atmin Terlebih dahulu_'}`, m)
         if (isBotAdmin && bot.restrict) {
             // await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
  /*   global.db.data.users[m.sender].warn += 1

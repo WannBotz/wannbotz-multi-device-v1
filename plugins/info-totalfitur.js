@@ -5,13 +5,13 @@ let totalf = Object.values(global.plugins).filter(
   ).length;
  await conn.sendButton(m.chat, `Total Fitur Bot Saat ini: ${totalf}\n`,wm + '\n\n' + botdate, giflogo, [['MENU','.menu']], m, {
 contextInfo: { externalAdReply :{
-                        mediaUrl: '',
+                        mediaUrl: syt,
                         mediaType: 2,
-                        description: 'anu',
+                        description: syt,
                         title: bottime,
                         body: 'Total Cintaku Padamu',          previewType: 0,
                         thumbnail: fs.readFileSync("./thumbnail.jpg"),
-                        sourceUrl: sig
+                        sourceUrl: syt
                       }}
 })
 }

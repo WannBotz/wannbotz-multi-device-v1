@@ -31,14 +31,14 @@ let handler = async (m, { conn, args, command }) => {
        let tag = `@${m.sender.replace(/@.+/, '')}`
   let mentionedJid = [m.sender]
     
- conn.sendButtonDoc(m.chat, `𝑩𝒐𝒕 𝑼𝒑𝒕𝒊𝒎𝒆`, muptime + '\n\n', 'MENU', '.menu', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
-    mediaUrl: 'wa.me/6281361281833?text=Halo+aldi+ganteng❀',
-    mediaType: 2, 
-    description: sgc,
-    title: "Join Sini Juga Cuy!",
+ conn.sendButtonDoc(m.chat, `𝑩𝒐𝒕 𝑼𝒑𝒕𝒊𝒎𝒆`, muptime + '\n\n', 'MENU', '.menu', m, { contextInfo: { externalAdReply: { showAdAttribution: false,
+    mediaUrl: syt,
+    mediaType: 1, 
+    description: syt,
+    title: gcname,
     body: wm,
     thumbnail: fs.readFileSync('./thumbnail.jpg'),
-    sourceUrl: sgc
+    sourceUrl: syt
      }}
   })
 }

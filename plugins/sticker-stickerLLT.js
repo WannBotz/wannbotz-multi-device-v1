@@ -11,6 +11,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 `.trim())
     for (let data of (json[0]?.stickers || json)) {
         const stiker = await sticker(false, data.sticker || data, global.packname, global.author)
+        conn.reply(m.chat, `${wait}`, m)
         await conn.sendFile(m.chat, stiker, 'sticker.webp', '', m).catch(console.error)
         await delay(1500)
     }
