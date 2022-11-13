@@ -37,17 +37,20 @@ const readMore = more.repeat(4001)
 // kalo ga punya ketik "-" atau biarin aja biar ada creditsnya :v
  // my youtube channel
 
+
+
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ NO OWNER ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
 
 global.owner = [
-['6281265970249', '𝐖𝐚𝐧𝐧𝐳𝐱-𝐌𝐝', true],
-['6283870480221', '𝐖𝐚𝐧𝐧𝐁𝐨𝐭𝐳-𝐌𝐃', true]
+['12344054073', 'Wannzx-Md', true],//
+['6283870480221', 'WannBotz-MD Official', true]
 ]
 global.mods = []
 global.prems = []
-global.nomorbot = '6281265970249'
-global.nomorown = '6281265970249'
-global.nomorown1 = '6281265970249'
+global.nomorbot = '12344054073'
+global.nomorown = '12344054073'
+global.nomorownv2 = '+1 (234) 405 4073'
+global.nomorown1 = '12344054073'
 global.nomorown2 = '6283870480221'
 global.nomorwa = '0'
 
@@ -55,34 +58,34 @@ global.nomorwa = '0'
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ WM ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
 
 global.readMore = readMore
-global.gcname = '𝐖𝐚𝐧𝐧𝐁𝐨𝐭𝐳-𝐌𝐃 𝐎𝐟𝐟𝐢𝐜𝐢𝐚𝐥'
-global.author = '「 𝐖𝐚𝐧𝐧𝐳𝐱-𝐌𝐝 」'
-global.namebot = '​ 「 𝐖𝐚𝐧𝐧𝐁𝐨𝐭𝐳-𝐌𝐃 」'
+global.gcname = 'WannBotz-MD Official'//nama group kalian
+global.author = 'Wannzx-Md'
+global.namebot = 'WannBotz-MD Official'
 global.wm = 'WannBotz-MD'
-global.media = 'https://telegra.ph/file/c080917609684bf229cd3.jpg'
+global.media = 'https://telegra.ph/file/ed08cb8b1b8c7eb84aa19.jpg'
 global.watermark = wm
 global.status = 'public'
 global.danied = '          ⚠️ 𝐀𝐜𝐜𝐞𝐬 𝐃𝐚𝐧𝐢𝐞𝐝 ⚠️  '
 global.wame = 'https://wa.me/message/6TYVKZNILFJYL1'
 global.alllink = `https://youtu.be/lN-0jnuK2Ko`
-global.wm2 = '「 𝐖𝐚𝐧𝐧𝐁𝐨𝐭𝐳-𝐌𝐃 」 '
+global.wm2 = ' 𝐖𝐚𝐧𝐧𝐁𝐨𝐭𝐳-𝐌𝐃 '
 global.botdate = `⫹⫺ DATE: ${week} ${date}\n⫹⫺ TIME: ${wktuwib}`
 global.bottime = `T I M E : ${wktuwib}`
-global.titlebot = `𝐖𝐚𝐧𝐧𝐳𝐱-𝐌𝐝`
-global.stickpack = '𝐖𝐚𝐧𝐧𝐳𝐱-𝐌𝐝'
-global.stickauth = `© 𝐖𝐚𝐧𝐧𝐁𝐨𝐭𝐳-𝐌𝐃`
+global.titlebot = `Wannzx-Md`
+global.stickpack = 'Created by: '
+global.stickauth = `© WannBotz-MD Official`
 global.week = `${week} ${date}`
 global.wibb = `${wktuwib}`
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ OWNER INFO ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
-global.nameown1= '𝐖𝐚𝐧𝐧𝐳𝐱-𝐌𝐝'
-global.nameown2 = '𝐖𝐚𝐧𝐧𝐁𝐨𝐭𝐳-𝐌𝐃'
+global.nameown1= 'Wannzx-Md'
+global.nameown2 = 'WannBotz-MD Official'
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ MEDIA LINK ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
 global.Linkgc = 'Bentar'
 global.lynk = '-'
 
 
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ MEDIA SOSSIAL ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
-global.sig = 'https://instagram.com/wannzx_133'
+global.sig = 'https://instagram.com/wannzx_133'//Instagram klian
 global.sgh = 'https://github.com/WannBotz' //github
 global.tautanwa = 'https://wa.me/message/6TYVKZNILFJYL1'
 global.sgc = 'https://chat.whatsapp.com/Bbh5bDDQsWQBxQTaY5tHBJ' //group whatsapp
@@ -90,7 +93,7 @@ global.syt = 'https://youtube.com/channel/UC_kZ0QiOmykIPGMbfTcErJw' //youtube
 global.sytv = 'https://youtu.be/lN-0jnuK2Ko'//link video yt
 
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ DONASI ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
-global.pdana = '0812 65970249'
+global.pdana = '0812 6597 0249'
 global.povo = '-'
 global.pgopay = '0812 6597 0249'
 global.plinkaja = '0812 6597 0249' //link aja
@@ -127,11 +130,9 @@ global.htjava = '⫹⫺'    //hiasan Doang :v
 global.hsquere = ['⛶','❏','⫹⫺']
 
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ RESPOND ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
-global.stiker_wait = '⟪ ▰▰▰▰▰▰▱▱ ⟫ 90% 𝚠𝚊𝚒𝚝!!'
-global.wait1 = '⟪ ▰▱▱▱▱▱▱▱▱▱ ⟫ 10%'
-global.wait2 = '⟪ ▰▰▰▰▱▱▱▱▱▱ ⟫ 40%'
+global.stiker_wait = 'Sedang Memuat...'
 global.wait = 'Sedang Memuat...'
-global.wait4 = '⟪ ▰▰▰▰▰▰▰▰▰▰ ⟫ 100%'
+global.wait4 = 'Sedang Memuat...'
 global.eror = 'Mohon Maaf Server Kami Sedang Error!'
 
 
@@ -270,10 +271,10 @@ global.drtf = 'text/rtf'
 //OPTIONS
 global.optsnsfw = true // Untuk mematikan Dan Menyalakan Nsfw
 global.premnsfw = true // Nsfw Mode Premium?
-global.thumb = 'https://telegra.ph/file/c080917609684bf229cd3.jpg' //Main Thumbnail
-global.imagebot = 'https://telegra.ph/file/c080917609684bf229cd3.jpg'
+global.thumb = 'https://telegra.ph/file/ed08cb8b1b8c7eb84aa19.jpg' //Main Thumbnail
+global.imagebot = 'https://telegra.ph/file/ed08cb8b1b8c7eb84aa19.jpg'
 global.giflogo = 'https://telegra.ph/file/4d4f611baff7d92ec5e81.mp4'
-global.thumbs = ['https://telegra.ph/file/c080917609684bf229cd3.jpg']
+global.thumbs = ['https://telegra.ph/file/ed08cb8b1b8c7eb84aa19.jpg']
 global.thumbnailUrl = [
   'https://telegra.ph/file/81260a8b9e8cff26d2b48.jpg', 'https://telegra.ph/file/ac4928f0824a2a0492737.jpg',
   'https://telegra.ph/file/6359b013bc7e52c3b346f.jpg', 'https://telegra.ph/file/d43c89a5d2da72875ec05.jpg',
@@ -281,8 +282,8 @@ global.thumbnailUrl = [
   'https://telegra.ph/file/55e5af5f33fbd57104187.jpg', 'https://telegra.ph/file/af236598456b95884bd15.jpg',
   'https://telegra.ph/file/de92ed4a729887ffc974c.jpg', 'https://telegra.ph/file/00ce42a193b1dbbf907d4.jpg'
 ]
-global.fotonya1 = 'https://telegra.ph/file/c080917609684bf229cd3.jpg' //ganti jadi foto bot mu
-global.fotonya2 = 'https://telegra.ph/file/c080917609684bf229cd3.jpg' //ini juga ganti 
+global.fotonya1 = 'https://telegra.ph/file/ed08cb8b1b8c7eb84aa19.jpg' //ganti jadi foto bot mu
+global.fotonya2 = 'https://telegra.ph/file/ed08cb8b1b8c7eb84aa19.jpg' //ini juga ganti 
 global.flaaa2 = [
  "https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=water-logo&script=water-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextColor=%23000&shadowGlowColor=%23000&backgroundColor=%23000&text=",
  "https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=crafts-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&text=",
@@ -354,7 +355,7 @@ function ucapan() {
 
 global.fsizedoc = '99999999999999'
 global.fpagedoc = '999'
-global.thumbdoc = 'https://telegra.ph/file/c080917609684bf229cd3.jpg'
+global.thumbdoc = 'https://telegra.ph/file/ed08cb8b1b8c7eb84aa19.jpg'
 
 let file = fileURLToPath(import.meta.url)
 watchFile(file, () => {
