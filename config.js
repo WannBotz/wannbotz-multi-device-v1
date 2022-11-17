@@ -42,15 +42,15 @@ const readMore = more.repeat(4001)
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ NO OWNER ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
 
 global.owner = [
-['12344054073', 'Wannzx-Md', true],//
+['12342515773', 'Wannzx-Md', true],//
 ['6283870480221', 'WannBotz-MD Official', true]
 ]
 global.mods = []
 global.prems = []
-global.nomorbot = '12344054073'
-global.nomorown = '12344054073'
-global.nomorownv2 = '+1 (234) 405 4073'
-global.nomorown1 = '12344054073'
+global.nomorbot = '6283870480221'
+global.nomorown = '12342515773'
+global.nomorownv2 = '+1 (234) 251 5773'
+global.nomorown1 = '12342515773'
 global.nomorown2 = '6283870480221'
 global.nomorwa = '0'
 
